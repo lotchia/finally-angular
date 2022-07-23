@@ -1,0 +1,41 @@
+<div class="background ">
+
+    
+    <div class="bg-form">
+        <div class="rounded" >
+            <h1 >Login In</h1>
+            <form [formGroup]="loginform">
+                <div >
+                    <label for="IDEmail" >
+                      <i class="fa fa-solid fa-at"></i> <span>Email</span></label>
+                </div>
+                  <input formControlName="email" type="email" name="Email" id="IDEmail"
+                     placeholder="enter your email please " required>
+                        
+                <div >
+                  <label for="IDpass" >
+                     <i class="fa fa-solid fa-lock"></i><span>Password</span></label>
+                </div>
+                <input type="email" name="password" id="IDEmail"
+                placeholder="enter your password please " required>
+
+                <div class="but-sign">
+                    <button  type="button" class="btn btn-danger"  (click)="login()"
+                    [routerLink]="['/marketer/home']"  >
+                        Log in</button>
+                        <a [routerLink]="['/account/signup']">Sign up</a>
+                </div>
+        
+                    
+                
+            </form>
+        </div>
+            <div>
+                <img src="/../assets/image/one.png"/>
+            </div>
+      
+       
+    </div>
+  
+
+</div>

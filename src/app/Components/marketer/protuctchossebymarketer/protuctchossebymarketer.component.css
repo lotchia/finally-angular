@@ -1,0 +1,78 @@
+.box
+{
+    
+  
+    padding: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 3px lightblue;
+    cursor: -webkit-grab; cursor: grab;
+  }   
+
+ h2
+ {
+    color: #52050A;
+ }
+
+.item
+{
+    margin: 0px 15px;
+    text-align: center;
+}
+.item a:hover
+{
+    color: #52050A;
+}
+.card
+{
+    padding: 20px;
+    margin: 30px;
+    box-shadow: 5px 5px 3px lightblue;
+}
+.search-input
+{
+    border-radius: 3px;
+    margin-left: 15px;
+    border:2px solid lightblue ;
+    margin-top: 30px;
+    width: 88%;
+  
+}
+.search-icon
+{
+    position: absolute;
+    z-index: 10;
+    right: 10%;
+    top:535px;
+    color: lightblue;
+}
+
+.hearticon
+{
+    color: #52050A;
+    font-size: 20px;
+}
+.image
+{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+.image:hover
+{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.title
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+
+}
+.color
+{
+    background-color:#9BA290 ;
+    display: block;
+}

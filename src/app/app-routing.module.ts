@@ -5,7 +5,10 @@ import { UserMainLayoutComponent } from './layout/user/user-main-layout/user-mai
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { MarketerPageComponent } from './Components/marketer-page/marketer-page.component';
 import { CollectionComponent } from './Components/collection/collection.component';
-import { ProductComponent } from './Components/product/product.component';
+import { AddcollectionproductComponent } from './Components/marketer/addcollectionproduct/addcollectionproduct.component';
+import { ProductincollectionComponent } from './Components/marketer/productincollection/productincollection.component';
+import { WalletComponent } from './Components/marketer/wallet/wallet.component';
+import { ProtuctchossebymarketerComponent } from './Components/marketer/protuctchossebymarketer/protuctchossebymarketer.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"user",pathMatch:"full"},
@@ -15,6 +18,11 @@ const routes: Routes = [
     children: [
       { path: '', component: MarketerPageComponent},
       { path: 'collection', component: CollectionComponent},
+      { path:'addcollectionproduct',component:AddcollectionproductComponent},
+      {path:'productincollection',component:ProductincollectionComponent},
+      {path:'wallet',component:WalletComponent},
+      {path:'chooseproduct',component:ProtuctchossebymarketerComponent},
+
     ]
   },
   {
@@ -22,7 +30,6 @@ const routes: Routes = [
     component: UserMainLayoutComponent,
     children: [
       { path: '', component: LandingPageComponent },
-      { path: 'product', component: ProductComponent },
     ]
   },
 ];

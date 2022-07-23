@@ -1,0 +1,197 @@
+.vanbar
+{
+  background-color: #182525;
+  height: 750px;
+}
+.header
+{
+  width: 100%;
+}
+
+.line
+{
+  border: 2px solid white;
+
+}
+p{
+  letter-spacing: 6px;
+  color: rgb(9, 9, 145);
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.icon
+{
+margin-left: 25px;
+margin-top: 30px;
+font-size: 0.8rem;
+height: 44px;
+margin-bottom: 4px;
+border-radius: 5px;
+color: white;
+
+display: flex;
+}
+i{
+  margin-top: 6px;
+}
+h5{
+  margin-left: 5px;
+}
+.icon
+{
+    line-height: 1.2em;
+  color: #0000;
+  text-shadow: 
+    0 0 white, 
+    0 1.2em #182525;
+  overflow: hidden;
+  transition: .3s;
+}
+.icon :hover
+{
+  text-shadow: 
+    0 -1.2em #000, 
+    0 0 #1095c1;
+      
+}
+
+.dropbtn {
+
+    background-color: white;
+      color: black;
+      padding: 5px;
+      font-size: 16px;
+      border: none;
+      margin-left: 70rem;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      margin-left: 70rem;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .page
+{
+    color:white;
+    padding: 0 1rem;
+    background:  #f1f5f9;
+}
+.pagebox
+{
+    min-height: 120px;
+    background-color: #182525;
+    margin: 0 -1rem;
+    font-size: 36px;
+}
+.pagecontent
+{
+    min-height: calc(100vh -160px);
+    border-radius: 10px;
+    margin-top: -2rem;
+    background: white;
+    color:black;
+    font-size: 2rem;
+    height: 1000px;
+}
+.pagecontentdate
+{
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+    
+}
+.marketerimg
+{
+    border-radius: 50%;
+    width:150px;
+    height: 150px;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+.background
+{
+    margin: 0;
+    padding: 0;
+    height: 47rem;
+    background-color:rgb(98, 175, 231);
+    background-image: linear-gradient(to bottom right,rgb(11, 74, 45) , rgb(130, 238, 244));
+    display: flex;
+}
+
+.bg-form
+{
+   background-color: aliceblue;
+   height: 42rem;
+   width: 88rem;
+   margin-top: 3rem;
+   margin-left: 4rem;
+   display: flex;
+
+
+}
+.rounded
+{
+    width: 45rem;
+    height: 40rem;
+    
+}
+
+    .personalimg
+    {
+      width: 60px;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .plusicon
+{
+  margin-left: 80rem;
+  font-size: 60px;
+   color: #182525;
+}
+
+.divheader {
+    height: 15px;
+    width: 90px;
+    background-color: #9BA290;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+}
+
+.divbody {
+    height: 200px;
+    width: 300px;
+    background-color: #9BA290;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+h1 {
+    color: #52050A;
+}
+
+img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}

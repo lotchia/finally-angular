@@ -50,4 +50,61 @@
   border-top: 1px solid #fff;
   margin-top: 0;
   }
+  .vanbar
+{
+  background-color: #182525;
+  height: 750px;
+  width: 200px;
+}
+.header
+{
+  width: 100%;
+}
+
+.line
+{
+  border: 2px solid white;
+
+}
+p{
+  letter-spacing: 6px;
+  color: rgb(9, 9, 145);
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.icon
+{
+margin-left: 25px;
+margin-top: 30px;
+font-size: 0.8rem;
+height: 44px;
+margin-bottom: 4px;
+border-radius: 5px;
+color: white;
+
+display: flex;
+}
+i{
+  margin-top: 6px;
+}
+h5{
+  margin-left: 5px;
+}
+.icon
+{
+    line-height: 1.2em;
+  color: #0000;
+  text-shadow: 
+    0 0 white, 
+    0 1.2em #182525;
+  overflow: hidden;
+  transition: .3s;
+}
+.icon :hover
+{
+  text-shadow: 
+    0 -1.2em #000, 
+    0 0 #1095c1;
+      
+}
   

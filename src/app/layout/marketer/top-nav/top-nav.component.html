@@ -1,5 +1,28 @@
-<nav class="navbar navbar-dark bg-dark">
+
+<nav class="navbar navbar-dark">
+  <div style="height: 60px;">
+    <div class="dropdown">
+    <button class="dropbtn"><img class="personalimg" src="p15.png"/>username
+      <i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <button [routerLink]='["/account/login"]'>Sign Out<i class="fas fa-solid fa-arrow-right-from-bracket">
+  
+      </i></button>
+      
+    </div>
+    </div></div>
+    <div style="background-color: #182525; width: 100%; height: 100px;">
     <app-side-nav-toggler></app-side-nav-toggler>
-      <h3>keep_growing</h3>
+    
+    
+      <div class="container-fluid page">
+        <div class="pagebox p-3 mt-2">HOME
+           <a class="plusicon"><i class="fa fa-solid fa-plus" style="margin-left: 60rem; color:white"></i></a>
+        </div>
+        
+      <div class="pagecontent shadow p-3 position-relative"><div  class="page"></div>
+</div>
+</div>
+</div>
   </nav>
   

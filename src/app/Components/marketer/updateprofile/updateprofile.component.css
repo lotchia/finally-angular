@@ -1,0 +1,155 @@
+
+.marketerimg
+{
+    border-radius: 50%;
+    width:150px;
+    height: 150px;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+.background
+{
+    margin: 0;
+    padding: 0;
+    height: 47rem;
+    background-color:rgb(98, 175, 231);
+    background-image: linear-gradient(to bottom right,rgb(11, 74, 45) , rgb(130, 238, 244));
+    display: flex;
+}
+
+.bg-form
+{
+   background-color: aliceblue;
+   height: 42rem;
+   width: 88rem;
+   margin-top: 3rem;
+   margin-left: 4rem;
+   display: flex;
+
+
+}
+.rounded
+{
+    width: 45rem;
+    height: 40rem;
+    
+}
+
+form
+{
+    margin-left: 12rem;     
+}
+
+form div
+{
+    margin-top: 0.5rem;
+}
+
+span
+{
+    
+    margin-left: 0.5rem;
+    font-weight: 900;
+}
+.label
+{
+    margin-left: 17rem;
+   font-weight: 900;
+
+}
+
+form input
+{
+    margin-top: 1rem;
+    height: 2rem;
+    outline: none;
+    background: none;
+     border: 0.1rem solid black; 
+    border-radius:2rem;
+     padding-left: 0.5rem;
+     width: 20rem;
+    
+}
+ ::placeholder
+ {
+     
+     padding-left: 0.1rem;
+ }
+#IDlastname ,#IDpass1
+{
+    margin-left: 9rem;
+    background: none;
+    border: 0.1rem solid black;
+}
+#IDEmail 
+{
+    width:  50rem;
+    background: none;
+    border: 0.1rem solid black;
+}
+#IDcountry 
+{
+    width: 15rem;
+}
+#IDcity ,#IDstreet
+{
+    width: 15rem;
+    margin-left: 50px;
+}
+#IDphone
+{
+    width: 37rem;
+    background: none;
+    border-radius:0 2rem  2rem 0 ;
+    border: 0.1rem solid black;
+    margin-left: -0.2rem;
+}
+.eg-num
+{
+    
+    font-weight: bold;
+    border-right: none;
+    margin-bottom: 1rem  ;
+    border-radius:2rem 0  0 2rem ;
+    border: 0.1rem solid black;
+    padding: 0.11rem;
+    border-right:none ;
+    
+}
+.city 
+{
+    margin-left: 9rem;
+}
+
+div form img
+{
+    width: 2rem;
+ 
+}
+
+.checkbox input
+{
+   
+margin-top: 0px;
+width: 15px;
+}
+.checkbox p
+{
+    margin-left: 0.5rem;
+    font-weight: 900;
+
+}
+.but-sign
+{
+    margin-top: 0.5rem;
+}
+.btn
+{
+    background-color: darkred;
+    color: aliceblue;
+}
+.but-sign a
+{
+    color:darkred; 
+}
+

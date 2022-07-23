@@ -13,8 +13,9 @@ import { UserMainLayoutComponent } from './layout/user/user-main-layout/user-mai
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 import { MarketerPageComponent } from './Components/marketer-page/marketer-page.component';
 import { NavComponent } from './layout/user/nav/nav.component';
-import { ProductComponent } from './Components/product/product.component';
 import { CollectionComponent } from './Components/collection/collection.component';
+import { SharedModule } from './shard/shared.module';
+import { UpdateprofileComponent } from './Components/marketer/updateprofile/updateprofile.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +29,16 @@ import { CollectionComponent } from './Components/collection/collection.componen
     FooterComponent,
     NavComponent,
     UserMainLayoutComponent,
-    PageContentComponent,
-    ProductComponent,
-    CollectionComponent
+    CollectionComponent,
+    UpdateprofileComponent,
+    FooterComponent,
+    NavComponent,
+    UserMainLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
