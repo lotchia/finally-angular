@@ -1,0 +1,24 @@
+
+<div class="card box">
+    <h2 class="card-header" >Categories</h2>
+    <div class="card-body">
+      <div class="border box" (change)="filtercategoty($event)">All Produc ></div>
+
+      <div class="border box " *ngFor="let option of categorieslist" (click)="filtercategoty(option)">{{option}}</div>
+    </div>
+  </div>
+  <div class="card box">
+    <h2 class="card-header">Price Filter</h2>
+    <div class="card-body">
+      <input type="range" min="200" max="10000" value="50">
+
+    </div>
+  </div>
+<!-- 
+<div class="card box">
+  <h2 class="card-header">Paypal</h2>
+  <div class="card-body">
+    <div id="myPaypalButtons"></div>
+
+  </div>
+</div> -->

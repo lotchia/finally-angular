@@ -11,7 +11,7 @@ export class ApiService {
   
   searchProduct(val:string)
   {
-    return this.http.get<any>("https://fakestoreapi.com/products")
+    return this.http.get<any>("https://localhost:63000/Api/")
     .pipe(map((res:any)=>{
       return res
     } 
@@ -19,15 +19,15 @@ export class ApiService {
   }
   getproduct()
   {
-    return this.http.get<any>("https://fakestoreapi.com/products")
-    .pipe(map((res:any)=>{
-      return res
-    } 
-    ))
+    return this.http.get<any>("https://localhost:63000/Api/Getproduct")
+    // .pipe(map((res:any)=>{
+    //  console.log(res)
+    // } 
+ 
   }
 getallcategories()
 {
-  return this.http.get<any>("https://fakestoreapi.com/products/categories")
+  return this.http.get<any>("https://localhost:63000/Api/GetCaterory/Get")
   .pipe(map((res:any)=>{
     return res
   } 
@@ -35,7 +35,7 @@ getallcategories()
 }
 getproductbycategoty(keyword :string)
 {
-  return this.http.get<any>("https://fakestoreapi.com/products/category/"+keyword)
+  return this.http.get<any>("https://localhost:63000/Api/GetCaterory/Get"+keyword)
 }
 
 getProductById(id:any)

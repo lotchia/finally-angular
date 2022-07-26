@@ -1,0 +1,28 @@
+
+
+  <div class=" container">
+    <div class="form-groub">
+      <input type="text" class="search-input" id="filter-text-box" placeholder="Search Product" #query
+        (keyup.enter)="filter(query.value)" />
+        <span class="fas fa-search search-icon"></span>
+    </div>
+    <ng-container *ngFor="let item of productlist">
+      <div class="card col-md-3 " >
+        <button class="btn " (click)=addtofavourit(item)><i class="fa fa-solid fa-heart hearticon"></i></button>
+      
+           
+           <img class="image" [src]="item.image" alt="" />
+           
+
+        <div class="body">
+          <h5 class="title">{{item.NameEn}}</h5>
+          <p class="title">{{item.Description}}</p>
+        </div>
+        <h6><strong>Price:</strong>{{item.price}}</h6>
+        <a routerLink="/product-details">
+        <button class="btn color" >See Datials</button>
+       </a>
+      
+
+      </div>
+    </ng-container>

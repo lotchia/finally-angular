@@ -1,0 +1,88 @@
+
+  nav  .logonav{
+    max-width: 7rem;   
+    left: 2rem;
+    top: 0rem;
+  }
+  nav ul {
+   margin-left: 200px;
+  }
+
+nav ul li a {
+  text-decoration: none;
+  color: #0066ff;
+  text-align: center;
+  padding: 0.5rem;
+  transition: linear;
+  width: 150px;
+  
+}
+nav ul li a:hover {
+  background-color: #0066ff;
+  color: #ffffff;
+  border-bottom: 0.1rem solid #000d21;
+  transition: all 0.2s;
+  box-shadow: #0066ff 0.2rem 0.1rem 0.9rem 0.1rem;
+
+} 
+ .active {
+  color: #0d0043;
+  border-bottom: 0.1rem solid #003b42;
+}
+nav form input {
+  border: none;
+  border-radius: 2rem;
+  background-color: none;
+  margin-bottom: 1rem;
+  margin-left:-90px;
+  width: 12rem;
+  height: 2rem;
+  border: 0.01rem solid rgb(3, 32, 89);
+}
+nav form input:focus {
+  border: none;
+  color: rgb(0, 0, 0);
+  border-radius: 2rem;
+  transition: all 0.5s;
+  padding: 1rem;
+  outline: none;
+  box-shadow: #0066ff 0.2rem 0.1rem 0.9rem 0.1rem;
+}
+nav form input::placeholder {
+  color: #52050a;
+  opacity: 0.5;
+  padding: 0.2rem;
+} 
+.searchic {
+width: 22px;
+  margin-top: -1rem;
+  margin-left: -2rem;
+  margin-bottom: -0.3rem;
+  cursor: pointer;
+}
+.enterLogin{
+  max-width: 2rem;
+  margin-left: 5rem;
+  cursor: pointer;
+
+}
+
+.carticon 
+{
+    font-size: 30px;
+    margin-top: 15px;
+    
+}
+.hearticon 
+{
+    
+  font-size: 30px;
+  margin-top: 15px;
+
+} 
+
+.badge
+{
+    font-size: 10px;
+    margin-top: 15px;
+}
