@@ -1,8 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { cartEditViewModel } from 'src/app/Models/cart';
+import { ProductData } from 'src/app/Models/ProductViewModel';
 import { ApiService } from 'src/app/service/api.service';
 import { CartService } from 'src/app/service/cart.service';
+import { ProductServices } from 'src/app/service/ProductServices';
 import { CartComponent } from '../cart/cart.component';
 
 @Component({
@@ -13,9 +15,9 @@ import { CartComponent } from '../cart/cart.component';
 export class ProductDetailsComponent implements OnInit {
   public productlist : any;
   id:any;
-  productdetails :any =[];
+  productdetails :ProductData = new ProductData;
   searchtext :string ="";
-    constructor(private route:ActivatedRoute ,private Api :ApiService ,private cartservice :CartService) {
+    constructor(private route:ActivatedRoute ,private Productserv :ProductServices ,private cartservice :CartService) {
       this.id =this.route.snapshot.paramMap.get("id")
       console.log(this.id)
      }
@@ -24,16 +26,19 @@ export class ProductDetailsComponent implements OnInit {
       this.getProductById();
     }
     getProductById(){
-      this.Api.getProductById(this.id).subscribe(res=>{
-      this.productdetails=res
+      this.Productserv.getProductById(this.id).subscribe(res=>{
+      this.productdetails=res.data.data;
       })
     }
     Onsearchtextchange(searchValue :string){
          this.searchtext=searchValue;
          console.log(this.searchtext)
     }
-    addtocart(item :cartEditViewModel){
-      this.cartservice.addtocart(item).subscribe(res=>{
+    addtocart(item :ProductData){
+      let val  = new cartEditViewModel();
+      val.ProductID  =item.id;
+      val.UserID = localStorage.getItem("id")??""
+      this.cartservice.addtocart(val).subscribe(res=>{
         console.log(res)
       });
    }

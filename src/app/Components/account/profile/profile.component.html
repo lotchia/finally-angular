@@ -1,0 +1,29 @@
+<div>
+    <div class="section1">
+         <div><img src="{{userdetails.Img}}"/></div>
+         <div><h1>{{userdetails.NameEn}}</h1></div>
+    </div>
+    <div class="section2">
+        <div class="form">
+        <div class="d-flex">
+        <div>
+          <h1>Name En:</h1>
+          <h1>Name Ar</h1>
+          <h1>Email</h1>
+          <h1>password</h1>
+         <h1>phone</h1>
+        </div>
+        <div>
+            <h5>{{userdetails.NameEn}}</h5>
+            <h5>{{userdetails.NameAr}}</h5>
+            <h5>{{userdetails.Email}}</h5>
+            <h5>{{userdetails.password}}</h5>
+            <h5>{{userdetails.phone}}</h5>
+        </div>
+    </div>
+</div>
+    <button class="btn btn-primary"[routerLink]="['/updateprofile',userdetails.id]">Update</button>
+    <button class="btn btn-primary btns">cancle</button>
+
+   
+</div>

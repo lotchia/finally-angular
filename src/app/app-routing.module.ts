@@ -19,6 +19,9 @@ import { AllCollectionComponent } from './all-collection/all-collection.componen
 import { CollectionProductsComponent } from './Components/collection-products/collection-products.component';
 
 
+import { UsersignupComponent } from './Components/account/usersignup/usersignup.component';
+import { LoginComponent } from './Components/account/login/login.component';
+import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
 
 const routes: Routes = [
   {
@@ -26,22 +29,24 @@ const routes: Routes = [
     component: MarketerMainLayoutComponent,
     children:[
       {path:"profile",component:ProfileComponent},
-      
-   {path:"allCollection",component:AllCollectionComponent},
-   {path:"collection/product",component:CollectionProductsComponent},
-   {path:"addCollection",component:AddcollectionComponent},
+      {path:"allCollection",component:AllCollectionComponent},
+      {path:"collection/product",component:CollectionProductsComponent},
+      {path:"addCollection",component:AddcollectionComponent},
     ]
    },
     
 
   {path:"",redirectTo:"homepage",pathMatch:"full"},
-  //  {path:"marketer",component:SideNavComponent},
-   
-  //  {path:"home",component:HomepageComponent},
-  //  {path:"editprofile",component:ProfileComponent},
+
    {path:"marketersignup",component:MarketerSignUpComponent},
    {path:"marketersignin",component:MarketerSignInComponent},
   
+  {path:'usersignup',component:UsersignupComponent},
+  {path:'login',component:LoginComponent},
+  {path:'homepage',component:HomepageComponent},
+  {path:'profile',component:ProfileComponent},
+  {path:'updateprofile',component:UpdateprofileComponent},
+
   {
     path: 'user',
     component: UserMainLayoutComponent,
@@ -49,18 +54,16 @@ const routes: Routes = [
       // { path: '', component: HomepageComponent },
       {path:'favourite',component:FavouriteComponent},
       {path:'get-product-to-collection',component:GetProductToCollectionsComponent},
-      {path:'productdetails',component:ProductDetailsComponent},
       {path:'product-list',component:ProductListComponent},
       {path:'cart',component:CartComponent},
-      {path:'homepage',component:HomepageComponent}
-      
-      
-      
+      {path:'homepage',component:HomepageComponent},
+      {path:'product-details/:id',component:ProductDetailsComponent},
     ]
    
     
   },
 
+  
 ];
 
 @NgModule({

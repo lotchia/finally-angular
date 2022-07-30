@@ -11,9 +11,11 @@ export class faviourtService {
   public ProductList = new BehaviorSubject<any>([]);
 
   constructor(private http : HttpClient) { }
-  // getProducts(){
-  //   return this.ProductList.subscribe();
-  // }
+
+  
+  getProducts(){
+    return this.http.get<any>("https://localhost:63000/Api/Getproduct")
+  }
 
   setProduct(Product :any){
     this.faviourtItemList.push(...Product);

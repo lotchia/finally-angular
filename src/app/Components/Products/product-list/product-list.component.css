@@ -1,17 +1,41 @@
-.container{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 90%;
-    flex-wrap: wrap;
-    margin-top: 3rem;
+.box
+{
+  
+    width: 300px;
+    height: 600px;
+    background-color: rgb(246, 243, 240);
+    margin-right: 3rem;
+   
+}
+.header{
+  padding-top: 30px;
+}
+.card{
+    width: 300px;
+}
+.card-header ,.card-img{
+  
+    border: 2px solid lightblue;
+    box-shadow: 2px 5px lightblue ;
+}
+.body{
+    border: 2px solid lightblue;
+    margin:30px;
+}
+h5{
+    text-align: center;
 }
 .search-input
 {
     width: 1000px;
+    border-radius: 15px;
 }
 span
 {
   margin-left: -60px;
+}
+.card-img{
+ margin-left: 60px;
+ margin-top: 10px;
+ width: 150px;
 }

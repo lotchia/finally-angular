@@ -6,6 +6,6 @@ export class cartViewModel{
 }
 export class cartEditViewModel{
     UserID:string='';
-    ProductID:string="";
+    ProductID:number=0;
 
 }

@@ -11,19 +11,19 @@ import { NgxPaginationModule } from "ngx-pagination";
   imports: [
     CommonModule,
     HttpClientModule,
+    RouterModule,
+    NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,
-    NgxPaginationModule
     
   ],
   exports:[
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
     RouterModule,
     NgxPaginationModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
