@@ -1,0 +1,64 @@
+
+    <div class="section1">
+        <div class="section2">
+            <form [formGroup]="updateform">
+                <img src=""/>
+                <h1 >Update</h1>
+                <form [formGroup]="updateform">
+                    <div >
+                        <label for="IDFRISTNAME" > 
+                          <i class="fa fa-solid fa-user"></i><span>Name En</span></label>
+                          <label for="IDFRISTNAME" class="label" > 
+                            <i class="fa fa-solid fa-user"></i><span>Name Ar</span></label>
+                    </div>
+                        <input formControlName="nameEn" type="text" name="full name" id="IDfristname"
+                            placeholder="enter your name please " required value="{{userdetails.NameEn}}">
+                            <input formControlName="nameAr" type="text" name="full name" id="IDlastname" 
+                            placeholder="enter your name please " required  value="{{userdetails.NameAr}}" >
+                    <div >
+                        <label for="IDEmail" >
+                            <i class="fa fa-solid fa-at"></i> <span>Email</span></label>
+                    </div>
+                        <input formControlName="email" type="email" name="Email" id="IDEmail"
+                            placeholder="enter your email please " required value="{{userdetails.Email}}">
+                        
+                    <div>
+                        <label for="IDpass" >
+                            <i class="fa fa-solid fa-lock"></i><span>Password</span></label>
+                          
+                    </div>
+                
+                    <input formControlName="password" type="password"  id="IDEmail" name="password"
+                    placeholder="enter your password  " required value="{{userdetails.Password}}">          
+                    <div class="d-flex" >
+                      <label for="IDpass"  >
+                        <i class="fa fa-solid fa-globe"></i><span>Country</span></label>
+                         <label for="IDpass1"  class="city"  >
+                            <i class="fa fa-solid fa-city"></i><span>City</span></label>       
+                            <label for="IDpass1" class="city"  >
+                                <i class="fa fa-solid fa-road"></i><span>Street</span></label>    
+                    </div>
+                    <input formControlName="country" type="text"  id="IDcountry" name="country"
+                    placeholder="country " required value="{{userdetails.Country}}">
+                        <input formControlName="city" type="text" id="IDcity" name="city"
+                            placeholder="city " required value="{{userdetails.City}}">
+                            <input formControlName="street" type="text" id="IDstreet" name="street"
+                            placeholder="street " required value="{{userdetails.street}}">
+                    <div>
+                        <label for="IDpass" style="display: block;">
+                            <i class="fa fa-solid fa-phone"></i><span>Phone</span></label>
+                            
+                                <label for="IDphone"  class="eg-num">+20</label>
+                                <input  formControlName="phones" type="text"  id="IDphone" name="phone"
+                                placeholder="enter your phone please  " required value="{{userdetails.phone}}">
+
+                    </div>  
+                    <button type="submit" class="btn btn-primary"  (click)="edit()" >Update</button>
+                    <button type="submit" class="btn btn-primary btns"  >Cancle</button>
+
+            </form>
+    
+      
+    
+   
+

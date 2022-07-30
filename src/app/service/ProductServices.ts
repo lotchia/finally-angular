@@ -7,7 +7,7 @@ import { ProudctViewModel } from "../Models/ProductViewModel";
 
 @Injectable({
     providedIn: 'root'
-  })
+})
 export class ProductServices {
     constructor(private http: HttpClient) { }
     // url: string = environment.apiUrl
@@ -27,16 +27,35 @@ export class ProductServices {
     // updateStudent(Product: ProudctViewModel) {
     //     return this.http.put<APIViewModel>(this.url + "Student/put", Product)
     // }
-    GetProduct() {
+    GetProduct(page: number, size: number) {
 
-        return this.http.get<APIViewModel>("https://localhost:63000/ProductApi/Get");
+        return this.http.get<APIViewModel>(`https://localhost:63000/Api/Getproduct?PageSize=${size}&PageIndex=${page}`);
 
     }
 
-    AddProduct(product: ProudctViewModel) {
-
-        return this.http.post<APIViewModel>("https://localhost:63000/ProductApi/Add", product);
+    getallcategories() {
+        return this.http.get<APIViewModel>("https://localhost:63000/Api/GetCaterory")
     }
+    getallbrands() {
+        return this.http.get<APIViewModel>("https://localhost:63000/Api/GetBrands")
+    }
+    getproductbycategoty(keyword: number) {
+        console.log(keyword)
+        return this.http.get<any>("https://localhost:63000/Api/Getproduct?categoryID=" + keyword)
+    }
+    getproductbyVendor(vendorID:string){
+        return this.http.get<APIViewModel>(`https://localhost:63000/Api/Getproduct?vendorID=${vendorID}`);
+    }
+    getProductById(id: any) {
+        return this.http.get<any>("https://localhost:63000/ProductDetails?ID=" + id)
+
+    }
+    searchProduct(val:string)
+  {
+    return this.http.get<any>(`https://localhost:63000/Api/Getproduct?CategoryName=${val}&NameAr=${val}&NameEn=${val}`);
+  }
+
+
 }
 
 

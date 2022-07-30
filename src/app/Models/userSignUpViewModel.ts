@@ -1,14 +1,13 @@
 export class UserSignupViewModel {
-    NameAr: string = "";
-    NameEn: string = '';
-    UserName: string = '';
-    Email: string = "";
-    Password: string = "";
-  
-    Country: string = "";
-    City: string = "";
-    Street: string = "";
-    Phones: string[] = [];
+    nameAr: string = "";
+    nameEn: string = '';
+    userName: string = '';
+    email: string = "";
+    password: string = "";
+    country: string = "";
+    city: string = "";
+    street: string = "";
+    phones: string[] = [];
     img: string = "";
 }
 
@@ -17,13 +16,9 @@ export class UserMarketerSignupViewModel {
     nameAr: string = "";
     email: string = "";
     password: string = "";
-   
     country: string = "";
     city: string = "";
     street: string = "";
-
     phones: string[] = [];
-
-    taxCard: string = " ";
     Img: string = " ";
 }

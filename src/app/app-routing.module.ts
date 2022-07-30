@@ -9,11 +9,20 @@ import { ProductDetailsComponent } from './Components/Products/product-details/p
 import { HomepageComponent } from './Components/Products/homepage/homepage.component';
 import { ProductListComponent } from './Components/Products/product-list/product-list.component';
 import { CartComponent } from './Components/Products/cart/cart.component';
+import { UsersignupComponent } from './Components/account/usersignup/usersignup.component';
+import { LoginComponent } from './Components/account/login/login.component';
+import { ProfileComponent } from './Components/account/profile/profile.component';
+import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
 
 const routes: Routes = [
 
   {path:"",redirectTo:"homepage",pathMatch:"full"},
-  
+  {path:'usersignup',component:UsersignupComponent},
+  {path:'login',component:LoginComponent},
+  {path:'homepage',component:HomepageComponent},
+  {path:'profile',component:ProfileComponent},
+  {path:'updateprofile',component:UpdateprofileComponent},
+
   {
     path: 'user',
     component: UserMainLayoutComponent,
@@ -21,15 +30,12 @@ const routes: Routes = [
       // { path: '', component: HomepageComponent },
       {path:'favourite',component:FavouriteComponent},
       {path:'get-product-to-collection',component:GetProductToCollectionsComponent},
-      {path:'productdetails',component:ProductDetailsComponent},
       {path:'product-list',component:ProductListComponent},
       {path:'cart',component:CartComponent},
-      {path:'homepage',component:HomepageComponent}
-
-      
-      
+      {path:'product-details/:id',component:ProductDetailsComponent},
     ]
   },
+
   
 ];
 

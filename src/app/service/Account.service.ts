@@ -3,24 +3,29 @@ import { Injectable } from '@angular/core';
 import { LoginResultViewModel } from '../Models/Acount';
 import { LoginViewModel } from '../Models/LoginViewModel';
 import { APIViewModel } from '../Models/APIViewModel';
-import { UserMarketerSignupViewModel } from '../Models/SignUpViewModel';
+import { UserSignupViewModel } from '../Models/userSignUpViewModel';
+
+import { UserUpdateViewModel } from '../Models/userupdateViewModel';
+import {map} from 'rxjs/operators';
+
 @Injectable({
     providedIn: 'root'
   })
 export class AccountService {
+  userid:string="";
 
   constructor(private http:HttpClient) { }
 
 
   login (LogIn : LoginViewModel){
 
-   return this.http.post<LoginResultViewModel>("https://localhost:63000/User/Login",LogIn)
+   return this.http.post<LoginResultViewModel>("https://localhost:63000/User/Signin",LogIn)
 
   }
 
   logout(){
     let token=localStorage.getItem('Token');
-    return this.http.post<LoginResultViewModel>("https://localhost:63000/User/SignIn",{token:token});
+    return this.http.post<LoginResultViewModel>("https://localhost:63000/User/SignOut",{token:token});
 }
 IsLoggedIn():boolean{
     let token =localStorage.getItem('token')
@@ -30,13 +35,20 @@ IsLoggedIn():boolean{
     return false;
 }
 ////////////////////////////
-addMarketer(Register: UserMarketerSignupViewModel){
-     console.log(Register)
- return this.http.post<APIViewModel>("https://localhost:63000/Api/AddMarketer",Register);
+// addMarketer(Register: UserMarketerSignupViewModel){
+//      console.log(Register)
+//  return this.http.post<APIViewModel>("https://localhost:63000/Api/AddMarketer",Register);
+
+// }
+
+addUser(RegisterView: UserSignupViewModel){
+  return this.http.post<APIViewModel>("https://localhost:63000/User/Register",RegisterView)
+}
+getinfo(userid:any){
+  return this.http.get<any>("https://localhost:63000/User/UpdateProfile?ID="+userid)
 
 }
-
-addUser(RegisterView: UserMarketerSignupViewModel){
-  return this.http.post<APIViewModel>("https://localhost:63000/User/Register",RegisterView)
+edit(userupdateViewModel:UserUpdateViewModel){
+  return this.http.post<APIViewModel>("https://localhost:63000/User/Profile",userupdateViewModel)
 }
 }

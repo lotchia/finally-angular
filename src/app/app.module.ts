@@ -4,7 +4,6 @@ import { MarketerMainLayoutComponent } from './layout/marketer/marketer-main-lay
 import { SideNavTogglerComponent } from './layout/marketer/side-nav-toggler/side-nav-toggler.component';
 import { SideNavComponent } from './layout/marketer/side-nav/side-nav.component';
 import { TopNavComponent } from './layout/marketer/top-nav/top-nav.component';
-import { FooterComponent } from './layout/user/footer/footer.component';
 import { UserMainLayoutComponent } from './layout/user/user-main-layout/user-main-layout.component';
 import { NavComponent } from './layout/user/nav/nav.component';
 import { NgModule } from '@angular/core';
@@ -14,31 +13,38 @@ import { PageContentComponent } from './layout/page-content/page-content.compone
 import { SharedModule } from './shard/shared.module';
 import { HomepageComponent } from './Components/Products/homepage/homepage.component';
 import { GetProductToCollectionsComponent } from './Components/Products/get-product-to-collections/get-product-to-collections.component';
-import { SidenavbarComponent } from './layout/user/sidenavbar/sidenavbar.component';
+import { FormsModule } from '@angular/forms';
+import { AccountModule } from './Components/account/account.module';
+import { CartComponent } from './Components/Products/cart/cart.component';
+import { FavouriteComponent } from './Components/Products/favourite/favourite.component';
+import { ProductDetailsComponent } from './Components/Products/product-details/product-details.component';
+import { ProductListComponent } from './Components/Products/product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
- 
     SideNavComponent,
     SideNavTogglerComponent,
     TopNavComponent,
     MarketerMainLayoutComponent,
-    FooterComponent,
     NavComponent,
     UserMainLayoutComponent,
     GetCollectionsComponent,
     PageContentComponent,
     HomepageComponent,
     GetProductToCollectionsComponent,
-    SidenavbarComponent,
+    CartComponent,
+    FavouriteComponent,
+   ProductDetailsComponent,
+   ProductListComponent
    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    AccountModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,6 @@ export class FavouriteViewModel{
 }
 export class FavouriteEditViewModel{
     UserID:string='';
-    ProductID:string="";
+    ProductID:number=0;
 
 }
