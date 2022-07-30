@@ -15,6 +15,13 @@ import { SharedModule } from './shard/shared.module';
 import { HomepageComponent } from './Components/Products/homepage/homepage.component';
 import { GetProductToCollectionsComponent } from './Components/Products/get-product-to-collections/get-product-to-collections.component';
 import { SidenavbarComponent } from './layout/user/sidenavbar/sidenavbar.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MarketerSignUpComponent } from './marketer-sign-up/marketer-sign-up.component';
+import { MarketerSignInComponent } from './marketer-sign-in/marketer-sign-in.component';
+import { AddcollectionComponent } from './addcollection/addcollection.component';
+import { AllCollectionComponent } from './all-collection/all-collection.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CollectionProductsComponent } from './Components/collection-products/collection-products.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +39,20 @@ import { SidenavbarComponent } from './layout/user/sidenavbar/sidenavbar.compone
     HomepageComponent,
     GetProductToCollectionsComponent,
     SidenavbarComponent,
+    ProfileComponent,
+    MarketerSignUpComponent,
+    MarketerSignInComponent,
+    AddcollectionComponent,
+    AllCollectionComponent,
+    CollectionProductsComponent,
    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

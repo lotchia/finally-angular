@@ -8,6 +8,8 @@ export class CollectionViewModel{
 export class CollectionEditViewModel{
     NameAr:string="";
     NameEN:string="";
+    id:number=0;
+    code:string="";
     MarketerID=localStorage.getItem("id");
 
 }

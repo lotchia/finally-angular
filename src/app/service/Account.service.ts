@@ -14,7 +14,7 @@ export class AccountService {
 
   login (LogIn : LoginViewModel){
 
-   return this.http.post<LoginResultViewModel>("https://localhost:63000/User/Login",LogIn)
+   return this.http.post<LoginResultViewModel>("https://localhost:63000/User/SignIn",LogIn)
 
   }
 
@@ -32,7 +32,7 @@ IsLoggedIn():boolean{
 ////////////////////////////
 addMarketer(Register: UserMarketerSignupViewModel){
      console.log(Register)
- return this.http.post<APIViewModel>("https://localhost:63000/Api/AddMarketer",Register);
+ return this.http.post<APIViewModel>("https://localhost:63000/Marketer/Register",Register);
 
 }
 

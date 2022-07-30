@@ -50,9 +50,21 @@
   border-top: 1px solid #fff;
   margin-top: 0;
   }
+  #container{
+    display: flex;
+    
+
+  }
+  #welcom{
+    font-weight: 700;
+    margin-left: 30%;
+    margin-top: 20%;
+    font-size: 80px;
+    
+  }
   .vanbar
 {
-  background-color: #182525;
+  background-color: #163a3a;
   height: 750px;
   width: 200px;
 }
@@ -68,7 +80,7 @@
 }
 p{
   letter-spacing: 6px;
-  color: rgb(9, 9, 145);
+  color: rgb(21, 196, 202);
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -106,5 +118,13 @@ h5{
     0 -1.2em #000, 
     0 0 #1095c1;
       
+}
+#text{
+  color: aqua;
+  font-weight: 800;
+  
+}
+#home{
+  color: white;
 }
   
