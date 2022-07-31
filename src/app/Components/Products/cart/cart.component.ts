@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { cartEditViewModel, cartViewModel } from 'src/app/Models/cart';
-import { ProductData } from 'src/app/Models/ProductViewModel';
 import { CartService } from 'src/app/service/cart.service';
 import { OrderService } from 'src/app/service/order.service';
 import * as _ from 'underscore';

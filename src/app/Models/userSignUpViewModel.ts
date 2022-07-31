@@ -21,4 +21,5 @@ export class UserMarketerSignupViewModel {
     street: string = "";
     phones: string[] = [];
     Img: string = " ";
+    taxCard:string=""
 }

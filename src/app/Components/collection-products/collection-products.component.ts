@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { collectionPro } from 'src/app/Models/CollectionProductViewModel';
-import { ProductData } from 'src/app/Models/productViewModel';
 import { collectionProducts } from 'src/app/service/collectionProducts.service';
+import { ProductData } from 'src/app/Models/ProductViewModel';
+import {collectionPro } from 'src/app/Models/CollectionProductViewModel'; 
 
 @Component({
   selector: 'app-collection-products',

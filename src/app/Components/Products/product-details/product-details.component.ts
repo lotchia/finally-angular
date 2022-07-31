@@ -4,7 +4,7 @@ import { cartEditViewModel } from 'src/app/Models/cart';
 import { ProductData } from 'src/app/Models/ProductViewModel';
 import { CartService } from 'src/app/service/cart.service';
 import { ProductServices } from 'src/app/service/ProductServices';
-import { CartComponent } from '../cart/cart.component';
+
 
 @Component({
   selector: 'app-product-details',

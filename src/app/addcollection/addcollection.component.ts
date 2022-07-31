@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { addcollectionViewModel } from '../Models/addcollectionViewMpdel';
 import { FormBuilder, FormGroup, MaxLengthValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserMarketerSignupViewModel, UserSignupViewModel } from '../Models/SignUpViewModel';
 import { AccountService } from '../service/Account.service';
 import { CollectionService } from '../service/collection.service';
 import { CollectionEditViewModel } from '../Models/CollectionViewModel';
