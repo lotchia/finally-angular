@@ -13,7 +13,13 @@ import { PageContentComponent } from './layout/page-content/page-content.compone
 import { SharedModule } from './shard/shared.module';
 import { HomepageComponent } from './Components/Products/homepage/homepage.component';
 import { GetProductToCollectionsComponent } from './Components/Products/get-product-to-collections/get-product-to-collections.component';
-import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
+import { MarketerSignUpComponent } from './marketer-sign-up/marketer-sign-up.component';
+import { MarketerSignInComponent } from './marketer-sign-in/marketer-sign-in.component';
+import { AddcollectionComponent } from './addcollection/addcollection.component';
+import { AllCollectionComponent } from './all-collection/all-collection.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CollectionProductsComponent } from './Components/collection-products/collection-products.component';
 import { AccountModule } from './Components/account/account.module';
 import { CartComponent } from './Components/Products/cart/cart.component';
 import { FavouriteComponent } from './Components/Products/favourite/favourite.component';
@@ -33,17 +39,22 @@ import { ProductListComponent } from './Components/Products/product-list/product
     PageContentComponent,
     HomepageComponent,
     GetProductToCollectionsComponent,
+    ProfileComponent,
+    MarketerSignUpComponent,
+    MarketerSignInComponent,
+    AddcollectionComponent,
+    AllCollectionComponent,
+    CollectionProductsComponent,
     CartComponent,
     FavouriteComponent,
    ProductDetailsComponent,
-   ProductListComponent
-   
-    
+   ProductListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    HttpClientModule,
     AccountModule
     ],
   providers: [],

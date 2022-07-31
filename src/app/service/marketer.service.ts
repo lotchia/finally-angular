@@ -13,11 +13,13 @@ export class MarketerService {
 
   getmarketerById(id:any)
 {
-  return this.http.get<APIViewModel>("https://localhost:63000/User/UpdateProfile?ID="+id)
+  return this.http.get<APIViewModel>("http://localhost:4200/editprofile?ID="+id)
 }
 updatemarketer(val:EditUserProfile)
 {
-  return this.http.post<APIViewModel>("https://localhost:63000/User/Profile",val)
+  return this.http.post<APIViewModel>("http://localhost:4200/marketerprofile",val)
 }
-
+getProfileData(){
+return this.http.get<APIViewModel>("https://localhost:63000/User/UpdateProfile?ID=");
+}
 }

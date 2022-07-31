@@ -1,16 +1,32 @@
+
+<div id="container">
+
 <nav id="sidebar" class="navbar-dark bg-dark" [ngClass]="{'hidden': isHidden }">
 
     <div class="vanbar">
       <h1 style="color: white; padding-top: 20px; margin-top: 0px;">EXTRADE</h1>
         <div class="line"></div>
         <p >APPLICATION</p>
-        <div class="icon"  [routerLink]="['/marketer/home']" >
-          <i class="fa fa-solid fa-house-user"></i><h5>Home</h5>
+        <div class="icon"  routerLink="/user/homepage" >
+          <a class="fa fa-solid fa-house-user"></a><h5>Home</h5>
         </div>
-        <div class="icon" [routerLink]="['/marketer/Wallet']">
-          <i class="fa fa-solid fa-wallet"></i><h5>Wallet</h5></div>
-        <div class="icon" [routerLink]="['/marketer/collection']">
-          <i class="fa fa-solid fa-cubes"></i><h5>Collection</h5></div>
+
+        <div class="icon" routerLink="/profile" >
+          <a class="fa fa-solid fa-house-user"  ></a><h5>Profile</h5>
+        </div>
+        <div class="icon" [routerLink]="['/marketer/addCollection']">
+          <a class="fa fa-solid fa-cubes"></a><h5>Add Collection</h5>
+        </div>
+          <div class="icon"  [routerLink]="['/marketer/allCollection']" >
+            <a class="fa fa-solid fa-cubes"></a><h5>All Collection</h5>
+          </div>
+          <!-- <div class="icon" [routerLink]="['/marketer/Wallet']">
+            <a class="fa fa-solid fa-wallet"></a><h5>Wallet</h5></div> -->
       </div>
+     
   </nav>
+ 
+  <!-- <h1 id="welcom"> Welcome</h1> -->
+ 
+  </div>
   

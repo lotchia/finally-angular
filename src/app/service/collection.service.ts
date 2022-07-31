@@ -42,6 +42,6 @@ export class CollectionService {
     return this.http.get<APIViewModel>("https://localhost:63000/Api/GetCollection?id=" + this.collections);
   }
   getProductsInCollection(Code: string) {
-    return this.http.post<APIViewModel>("https://localhost:63000/Api/GetCollection", Code);
+    return this.http.post<APIViewModel>("https://localhost:63000/Api/AddCollection", Code);
   }
 }

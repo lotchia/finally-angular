@@ -3,10 +3,8 @@ import { Injectable } from '@angular/core';
 import { LoginResultViewModel } from '../Models/Acount';
 import { LoginViewModel } from '../Models/LoginViewModel';
 import { APIViewModel } from '../Models/APIViewModel';
-import { UserSignupViewModel } from '../Models/userSignUpViewModel';
-
+import { UserMarketerSignupViewModel, UserSignupViewModel } from '../Models/userSignUpViewModel';
 import { UserUpdateViewModel } from '../Models/userupdateViewModel';
-import {map} from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -19,7 +17,7 @@ export class AccountService {
 
   login (LogIn : LoginViewModel){
 
-   return this.http.post<LoginResultViewModel>("https://localhost:63000/User/Signin",LogIn)
+   return this.http.post<LoginResultViewModel>("https://localhost:63000/User/SignIn",LogIn)
 
   }
 
@@ -35,11 +33,11 @@ IsLoggedIn():boolean{
     return false;
 }
 ////////////////////////////
-// addMarketer(Register: UserMarketerSignupViewModel){
-//      console.log(Register)
-//  return this.http.post<APIViewModel>("https://localhost:63000/Api/AddMarketer",Register);
+addMarketer(Register: UserMarketerSignupViewModel){
+     console.log(Register)
+ return this.http.post<APIViewModel>("https://localhost:63000/Marketer/Register",Register);
 
-// }
+}
 
 addUser(RegisterView: UserSignupViewModel){
   return this.http.post<APIViewModel>("https://localhost:63000/User/Register",RegisterView)
