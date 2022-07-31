@@ -1,11 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { cartEditViewModel, cartViewModel } from 'src/app/Models/cart';
 import { CartService } from 'src/app/service/cart.service';
 import { OrderService } from 'src/app/service/order.service';
-import * as _ from 'underscore';
-import { all } from 'underscore';
-// { Component, OnInit } from '@angular/core';
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -28,9 +26,7 @@ export class CartComponent implements OnInit {
       console.log(this.products);
     })
     
-  scripts: [
-    "node_modules/jquery/dist/jquery.min.js",
-  ]
+
   }
   removeitem(id :number){
     this.loading=true;
