@@ -25,14 +25,14 @@
       <form class="d-flex">
         <li><input type="text" placeholder="Click Here To Search" /><img class="searchic" src="../../../../assets/image/search2.png" alt=""></li>
       
-        <a [routerLink]="['/faviourt']" class="hearticon">
+        <a [routerLink]="['/user/favourite']" class="hearticon">
           <i class="fa fa-solid fa-heart "></i>
-           <div class="badge bg-danger badge">{{totalItem}}</div>
+           <div class="badge bg-danger badge">{{totalItemfav}}</div>
       </a> 
 
-   <a [routerLink]="['/cart']" class="carticon">
+   <a [routerLink]="['/user/cart']" class="carticon">
     <i class="fa fa-solid fa-cart-arrow-down"></i>
-        <div class="badge bg-danger badge">{{totalItem}}</div>
+        <div class="badge bg-danger badge">{{totalItemcar}}</div>
    </a>
    <a class="carticon" (click)="logout()" routerLink="/user/login">
     <i class="fa fa-solid fa-arrow-right-from-bracket"></i>

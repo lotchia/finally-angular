@@ -2,7 +2,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { cartEditViewModel } from 'src/app/Models/cart';
 import { ProductData } from 'src/app/Models/ProductViewModel';
-import { ApiService } from 'src/app/service/api.service';
 import { CartService } from 'src/app/service/cart.service';
 import { ProductServices } from 'src/app/service/ProductServices';
 import { CartComponent } from '../cart/cart.component';
@@ -27,7 +26,8 @@ export class ProductDetailsComponent implements OnInit {
     }
     getProductById(){
       this.Productserv.getProductById(this.id).subscribe(res=>{
-      this.productdetails=res.data.data;
+        console.log(res)
+      this.productdetails=res.data;
       })
     }
     Onsearchtextchange(searchValue :string){
@@ -35,6 +35,7 @@ export class ProductDetailsComponent implements OnInit {
          console.log(this.searchtext)
     }
     addtocart(item :ProductData){
+      console.log(item);
       let val  = new cartEditViewModel();
       val.ProductID  =item.id;
       val.UserID = localStorage.getItem("id")??""

@@ -1,7 +1,9 @@
 import { HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class AuthService{
     constructor(){
 
@@ -19,5 +21,12 @@ export class AuthService{
          
         return{ headers: headers };
         
+    }
+    // localStorage.setItem('Token', res.token);
+    //     localStorage.setItem('username', value.Email);
+    //     localStorage.setItem('role', res.role);
+    //     localStorage.setItem("id", res.id);
+    GetCurrentUserID():string{
+        return localStorage.getItem("id")??""
     }
 }

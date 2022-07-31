@@ -26,8 +26,8 @@
     <div class="row text-center col-9 mt-5">
 
 
-      <div class="col-4"  *ngFor="let item of productlist  | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
-        <div class="card ms-3">
+      <div class="col-4 "  *ngFor="let item of productlist  | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
+        <div class="card ">
           <button class="btn " (click)=addtofavourit(item)><i class="fa fa-solid fa-heart hearticon"></i></button>
           <img class="card-img" src="item.img[0]" />
           <div class="card-body">

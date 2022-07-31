@@ -1,17 +1,22 @@
 .box
 {
   
-    width: 300px;
+    width: 600px;
     height: 600px;
     background-color: rgb(246, 243, 240);
-    margin-right: 3rem;
+    margin-right: 2rem;
    
 }
+
 .header{
   padding-top: 30px;
 }
 .card{
     width: 300px;
+    margin-bottom:50px;
+    margin-left: 60px;
+    padding-right: 30px;
+    
 }
 .card-header ,.card-img{
   
@@ -29,6 +34,7 @@ h5{
 {
     width: 1000px;
     border-radius: 15px;
+
 }
 span
 {
