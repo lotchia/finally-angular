@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { cartEditViewModel } from 'src/app/Models/cart';
-import { ProductData } from 'src/app/Models/ProductViewModel';
+import { ProductData } from 'src/app/Models/productViewModel';
 import { ApiService } from 'src/app/service/api.service';
 import { CartService } from 'src/app/service/cart.service';
 import { ProductServices } from 'src/app/service/ProductServices';

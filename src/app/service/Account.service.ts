@@ -3,8 +3,9 @@ import { Injectable } from '@angular/core';
 import { LoginResultViewModel } from '../Models/Acount';
 import { LoginViewModel } from '../Models/LoginViewModel';
 import { APIViewModel } from '../Models/APIViewModel';
-import { UserMarketerSignupViewModel, UserSignupViewModel } from '../Models/userSignUpViewModel';
+import { UserSignupViewModel } from '../Models/userSignUpViewModel';
 import { UserUpdateViewModel } from '../Models/userupdateViewModel';
+import { UserMarketerSignupViewModel } from '../Models/UserMarketerViewModel';
 
 @Injectable({
     providedIn: 'root'

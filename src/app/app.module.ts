@@ -25,6 +25,7 @@ import { CartComponent } from './Components/Products/cart/cart.component';
 import { FavouriteComponent } from './Components/Products/favourite/favourite.component';
 import { ProductDetailsComponent } from './Components/Products/product-details/product-details.component';
 import { ProductListComponent } from './Components/Products/product-list/product-list.component';
+import { CollectionComponent } from './Components/collection/collection.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,8 @@ import { ProductListComponent } from './Components/Products/product-list/product
     FavouriteComponent,
    ProductDetailsComponent,
    ProductListComponent,
+   CollectionProductsComponent,
+   CollectionComponent
   ],
   imports: [
     BrowserModule,

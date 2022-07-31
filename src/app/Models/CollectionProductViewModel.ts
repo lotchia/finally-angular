@@ -1,17 +1,16 @@
 
-export class collectionPro{
-    Quantity:string=""
-    CategoryID :number=0
-    CollectionID:string=""
-    category: string=""
-    Description :string = ""
-    Status:string=""
-    NameAr : string =""
-    NameEn: string = ""
-    VendorID:string=""
-    Price:number=0
-    IsDeleted:boolean=true
-    
+export class CollectionProductViewModel{
+    CollectionID:number= 0
+    CollectionName:string=""
+    nameEN:string=""
+    ProductID:number=0
+    ProductName:string=""
+    nameEn:string=""
+    ProductPrice:number=0
+    img:string=""
+    price:number=0
+
+
 }
 
 

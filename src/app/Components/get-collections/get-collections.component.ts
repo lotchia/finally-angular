@@ -19,9 +19,9 @@ export class GetCollectionsComponent implements OnInit {
       //this. CollectionServices.getCollection().subscribe();
       
       
-        this.CollectionServices.getCollection().subscribe(result=>
-          this.Collection = result.data as CollectionViewModel[] 
-          )
+        // this.CollectionServices.getCollection().subscribe(result=>
+        //   this.Collection = result.data as CollectionViewModel[] 
+        //   )
           
     
   }
@@ -36,9 +36,9 @@ export class GetCollectionsComponent implements OnInit {
   //   return this.Collection;
   // }
   
-  getProductInCollection(Code:string){
-    //let colProduct:CollectionProductEditViewModel=new CollectionProductEditViewModel();
-    this.CollectionServices.getProductsInCollection(Code).subscribe();
-  }
+  // getProductInCollection(Code:string){
+  //   //let colProduct:CollectionProductEditViewModel=new CollectionProductEditViewModel();
+  //   this.CollectionServices.getProductsInCollection(Code).subscribe();
+  // }
 
 }

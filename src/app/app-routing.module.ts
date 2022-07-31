@@ -22,6 +22,7 @@ import { CollectionProductsComponent } from './Components/collection-products/co
 import { UsersignupComponent } from './Components/account/usersignup/usersignup.component';
 import { LoginComponent } from './Components/account/login/login.component';
 import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
+import { CollectionComponent } from './Components/collection/collection.component';
 
 const routes: Routes = [
   {
@@ -30,8 +31,9 @@ const routes: Routes = [
     children:[
       {path:"profile",component:ProfileComponent},
       {path:"allCollection",component:AllCollectionComponent},
-      {path:"collection/product",component:CollectionProductsComponent},
+      {path:"collectionproducts/:id",component:CollectionProductsComponent},
       {path:"addCollection",component:AddcollectionComponent},
+      {path:"collectiondetails/:id",component:CollectionComponent},
     ]
    },
     

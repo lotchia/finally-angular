@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { APIViewModel } from '../Models/APIViewModel';
+import { CollectionProductViewModel } from '../Models/CollectionProductViewModel';
 import { CollectionEditViewModel, CollectionViewModel } from '../Models/CollectionViewModel';
 
 @Injectable({
@@ -9,39 +10,26 @@ import { CollectionEditViewModel, CollectionViewModel } from '../Models/Collecti
 export class CollectionService {
 
   constructor(private http: HttpClient) { }
+  private MarkterID: any = localStorage.getItem('id');
 
-  // getcollection(id: any) {
-  //   return this.http.get<any>("https://localhost:63000/Collection/ProductWithCollection" + id)
-  //     .pipe(map((res: any) => {
-  //       return res
-  //     }
-  //     ))
-  // }
-  // getproduct() {
-  //   return this.http.get<any>("https://localhost:63000/Product/GetProductWithCollection")
-  //     .pipe(map((res: any) => {
-  //       return res
-  //     }
-  //     ))
-  // }
-  // addcollection() {
-  //   return this.http.get<any>("https://localhost:63000/Product/GetProductWithCollection")
-  //     .pipe(map((res: any) => {
-  //       return res
-
-  //     }
-  //     ))
-  // }
-  private collections: any = localStorage.getItem('id');
+  getcollectionbyID(id: number) {
+    return this.http.get<APIViewModel>("https://localhost:63000/Collection/GetDetails?ID=" + id)
+  }
   addCollection(RegisterView: CollectionEditViewModel) {
     console.log(RegisterView)
     return this.http.post<APIViewModel>("https://localhost:63000/Api/AddCollection", RegisterView);
   }
-  getCollection() {
-    console.log(this.collections)
-    return this.http.get<APIViewModel>("https://localhost:63000/Api/GetCollection?id=" + this.collections);
+  getCollections() {
+    return this.http.get<APIViewModel>("https://localhost:63000/Api/GetCollection?id=" + this.MarkterID);
   }
-  getProductsInCollection(Code: string) {
-    return this.http.post<APIViewModel>("https://localhost:63000/Api/AddCollection", Code);
+  addCollectionProducts(list:CollectionProductViewModel[]){
+    return this.http.post<APIViewModel>("https://localhost:63000/CollectionDetails/AddAPI",list)
+  }
+  removeCollection(val:CollectionEditViewModel){
+    return this.http.post<APIViewModel>("https://localhost:63000/Collection/Delete",val)
+  }
+
+  getProductsBycollectionID(id: number) {
+    return this.http.get<APIViewModel>("https://localhost:63000/CollectionDetails/Get?CollectionID=" + id)
   }
 }
