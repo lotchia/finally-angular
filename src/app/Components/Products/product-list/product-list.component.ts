@@ -52,8 +52,6 @@ import { categoryViewModel } from 'src/app/Models/categoryViewModel';
 import { FavouriteEditViewModel } from 'src/app/Models/FavouriteViewModel';
 import { VendorBrandViewModel } from 'src/app/Models/vendorBrandViewModel';
 import { ProductData } from "src/app/Models/productViewModel";
-
-import { ApiService } from 'src/app/service/api.service';
 import { CartService } from 'src/app/service/cart.service';
 import { faviourtService } from 'src/app/service/faviourt.service';
 import { ProductServices } from 'src/app/service/ProductServices';
@@ -77,7 +75,7 @@ export class ProductListComponent implements OnInit {
   issearching = false;
   isfilter = false;
 
-  constructor(private api: ApiService, private cartservice: CartService, private faviourtService: faviourtService,
+  constructor(private cartservice: CartService, private faviourtService: faviourtService,
     private productservice: ProductServices) { }
 
   ngOnInit(): void {

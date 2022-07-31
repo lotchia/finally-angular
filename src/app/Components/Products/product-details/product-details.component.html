@@ -2,19 +2,26 @@
 <div class="box">
     <div class="row">
         <div class="col-md-5 col-ms-12">
-            <img src="{{productdetails.img[0]}}" alt=""/>
+            <img src="{{productdetails.images[0]}}" alt=""/>
         </div>
         <div class="col-md-5 col-ms-12 background">
             <div class="info">
                <ul class="list-unstyled">
-                <li><strong>Title :</strong>{{productdetails.nameEn}}</li>
+                <li><strong>Name en :</strong>{{productdetails.nameEn}}</li>
+                <li><strong>Name Ar :</strong>{{productdetails.nameAr}}</li>
                 <li><strong>Category :</strong>{{productdetails.category}}</li>
                 <li><strong>Description :</strong>{{productdetails.description}}</li>
-                <li><strong>Price</strong>{{productdetails.price}}</li>
+                <li><strong>Vendor Name :</strong>{{productdetails.vendorName}}</li>
+                <li><strong>Price: $</strong>{{productdetails.price}}</li>
                </ul>
+               <button class="btn btn-primary mt-5" (click)=addtocart(productdetails)>Add To Card</button>
             </div>
-            <button class="btn color" (click)=addtocart(productdetails) >Add To Card</button>
+           
         </div>
     </div>
 </div>
+
+ 
+   
+   
 

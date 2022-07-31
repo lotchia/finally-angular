@@ -1,5 +1,5 @@
 <!-- <app-header></app-header> -->
-<ng-container *ngIf="products.length !=0">
+<ng-container *ngIf="products.length >0">
     <div class="container">
         <div class="card-table">
             <div class="cart-product">
@@ -19,14 +19,21 @@
                 <tbody>
                     <tr *ngFor="let item of products , let i=index">
                          <td>{{i+1}}</td>
-                         <td>{{item.title}}</td>
-                         <td><img style="width: 120px;" src="{{item.image}}"/></td>
+                         <td>{{item.nameEn}}</td>
+                         <td><img style="width: 120px;" src="{{item.images}}"/></td>
                          <td style="width:25%;">{{item.description}}</td>
-                         <td style="width:12%;">{{item.Price}}</td>
-                         <td style="width:12%;">{{item.quantity}}</td>
-                         <td style="width:12%;">{{item.total}}</td>
+                         <td style="width:12%;">{{item.price}}</td>
+                         <!-- <td style="width:12%;">{{item.quantity}}</td> -->
+                         <td><form>
+                            <div class="value-button" id="decrease" (click)="decreaseValue(item.quantity,item.id,item.productID)" 
+                             value="Decrease Value">-</div>
+                            <span id="number">{{item.quantity}}</span>
+                            <div class="value-button" id="increase" (click)="increaseValue(item.quantity,item.id,item.productID)"
+                             value="Increase Value">+</div>
+                          </form></td>
+                         <!-- <td style="width:12%;">{{item.grandTotal()}}</td> -->
                          <td>
-                            <button (click)="removeitem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            <button (click)="removeitem(item.id)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                          </td>
                         
                     </tr>
@@ -47,7 +54,7 @@
 
 
 
-<ng-container *ngIf="products.length ==0">
+<div *ngIf="products.length <= 0">
     <div class="container">
         <div class="card">
             <h5 class="card-title">My Cart</h5>
@@ -56,10 +63,13 @@
             <img src="/../assets/image/two.webp" alt=""/>
             <h4>Your Card Is Empty</h4>
             <h6>Add Item to it now</h6>
-            <a    class="btn color">Shopping Now</a>
-            <!-- [routerLink]="[./product-list']" -->
+
+            <a routerLink="/user/product-list"
+               class="btn color">Shopping Now
+            </a>
+         
         </div>
     </div>
     
-</ng-container>
+</div>
 

@@ -4,8 +4,7 @@ import { CollectionProductViewModel } from 'src/app/Models/CollectionProductView
 import { CollectionViewModel } from 'src/app/Models/CollectionViewModel';
 import { ProductData } from 'src/app/Models/productViewModel';
 import { CollectionService } from 'src/app/service/collection.service';
-import { collectionProducts } from 'src/app/service/collectionProducts.service';
-import { ProductServices } from 'src/app/service/ProductServices';
+import { ProductServices } from 'src/app/service/ProductServices'; 
 
 @Component({
   selector: 'app-collection-products',

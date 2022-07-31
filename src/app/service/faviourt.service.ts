@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { APIViewModel } from '../Models/APIViewModel';
 import { FavouriteEditViewModel, FavouriteViewModel } from '../Models/FavouriteViewModel';
 
 @Injectable({
@@ -13,29 +14,22 @@ export class faviourtService {
   constructor(private http : HttpClient) { }
 
   
-  getProducts(){
-    return this.http.get<any>("https://localhost:63000/Api/Getproduct")
+  getProducts(id:string){
+    return this.http.get<APIViewModel>("https://localhost:63000/Favourite/Get?UserID="+id)
   }
 
-  setProduct(Product :any){
-    this.faviourtItemList.push(...Product);
-    this.ProductList.next(Product);
-  }
+  // setProduct(Product :any){
+  //   this.faviourtItemList.push(...Product);
+  //   this.ProductList.next(Product);
+  // }
   addtofaviourt(Product:FavouriteEditViewModel){
     // this.faviourtItemList.push(Product);
     // this.ProductList.next(this.faviourtItemList);
     return this.http.post<FavouriteViewModel>("https://localhost:63000/Favourite/Add",Product)
   }
-  removeCartItem(Product:any){
-    this.faviourtItemList.map((a:any,index:any)=>{
-      if(Product.id===a.id){
-        this.faviourtItemList.splice(index,1);
-      }
-    })
-    this.ProductList.next(this.faviourtItemList);
-  }
-  removeAllCart(){
-    this.faviourtItemList=[]
-    this.ProductList.next(this.faviourtItemList);
+  removeAllCart(id:number){
+    // this.faviourtItemList=[]
+    // this.ProductList.next(this.faviourtItemList);
+    return this.http.post<FavouriteViewModel>("https://localhost:63000/Favourite/Remove?ID="+id,null)
   }
 }

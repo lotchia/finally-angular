@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { APIViewModel } from '../Models/APIViewModel';
 import { cartEditViewModel, cartViewModel } from '../Models/cart';
+import { AuthService } from './Auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +12,11 @@ export class CartService {
   public CartItemList :any =[]
   public ProductList = new BehaviorSubject<any>([]);
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private auth:AuthService) { }
 
   getProducts(){
-    return this.http.get<any>("https://localhost:63000/Api/Getproduct")
+    let uid = localStorage.getItem("")
+    return this.http.get<APIViewModel>("https://localhost:63000/Cart/Get?UserID="+this.auth.GetCurrentUserID())
   }
 
   setProduct(Product :any){
@@ -21,10 +24,7 @@ export class CartService {
     this.ProductList.next(Product);
   }
   addtocart(Product:cartEditViewModel){
-    // this.CartItemList.push(Product);
-    // this.ProductList.next(this.CartItemList);
-    // this.getTotalPrice();
-    // console.log(this.CartItemList)
+    Product.Quantity = 1;
     return this.http.post<cartViewModel>("https://localhost:63000/Cart/Add",Product)
   }
   getTotalPrice() :number {
@@ -34,17 +34,16 @@ export class CartService {
     })
     return grandTotal;
   }
-  removeCartItem(Product:any){
-    this.CartItemList.map((a:any,index:any)=>{
-      if(Product.id===a.id){
-        this.CartItemList.splice(index,1);
-      }
-    })
-    this.ProductList.next(this.CartItemList);
+  removeCartItem(id:number){
+    console.log(id);
+    return this.http.delete<APIViewModel>("https://localhost:63000/Cart/Remove?ID="+id)
+
   }
   removeAllCart(){
     this.CartItemList=[]
     this.ProductList.next(this.CartItemList);
   }
+  updatequantity(cartEditViewModel: cartEditViewModel){
+    return this.http.post<APIViewModel>("https://localhost:63000/Cart/Update",cartEditViewModel)
   }
-
+}

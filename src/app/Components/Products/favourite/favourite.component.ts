@@ -9,20 +9,24 @@ import { faviourtService } from 'src/app/service/faviourt.service';
 export class FavouriteComponent implements OnInit {
 
   public products:any=[];
-   
+  public id : string=localStorage.getItem('id')??"";
     constructor(private faviourtService:faviourtService ) { }
   
     ngOnInit(): void {
-      // this.faviourtService.getProducts().subscribe(res=>{
-      //   this.products=res;
+      
+      this.faviourtService.getProducts(this.id).subscribe(res=>{
+       this.products=res.data;
+       console.log(res)
              
       // })
-    }
-    removeitem(item :any){
-      this.faviourtService.removeCartItem(item);
-    }
-    emptycart(){
-      this.faviourtService.removeAllCart();
+    })
+  }
+ 
+    removeitem(id:number){
+      this.faviourtService.removeAllCart(id).subscribe(res=>{
+        console.log(res)
+        window.location.reload()
+      });
     }
     }
 
