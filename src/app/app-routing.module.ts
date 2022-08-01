@@ -23,6 +23,7 @@ import { UsersignupComponent } from './Components/account/usersignup/usersignup.
 import { LoginComponent } from './Components/account/login/login.component';
 import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
 import { CollectionComponent } from './Components/collection/collection.component';
+import { MarketerWalletComponent } from './marketer-wallet/marketer-wallet.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,8 @@ const routes: Routes = [
       {path:"collectionproducts/:id",component:CollectionProductsComponent},
       {path:"addCollection",component:AddcollectionComponent},
       {path:"collectiondetails/:id",component:CollectionComponent},
+      {path:"wallet",component:MarketerWalletComponent}
+      
     ]
    },
     
@@ -42,7 +45,6 @@ const routes: Routes = [
 
    {path:"marketersignup",component:MarketerSignUpComponent},
    {path:"marketersignin",component:MarketerSignInComponent},
-  
   {path:'usersignup',component:UsersignupComponent},
   {path:'login',component:LoginComponent},
   {path:'homepage',component:HomepageComponent},

@@ -1,216 +1,120 @@
-
-
-
-<section style="background-color: rgb(114, 119, 119);">
-  <div class="container py-5">
+<!-- <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg "  color-on-scroll="20"  id="sectionsNav">
+  <div class="container"> -->
+      <!-- <div class="navbar-translate"> -->
+          <!-- <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html" target="_blank">Material Kit </a> -->
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div> -->
   
+      <!-- <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+              <li class="dropdown nav-item">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons">apps</i> Components
+                </a>
+                <div class="dropdown-menu dropdown-with-icons">
+                  <a href="../index.html" class="dropdown-item">
+                      <i class="material-icons">layers</i> All Components
+                  </a>
+                  
+                  <a href="https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">
+                      <i class="material-icons">content_paste</i> Documentation
+                  </a>
+                </div>
+              </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">
+            <i class="material-icons">cloud_download</i> Download
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/CreativeTim" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/CreativeTim" target="_blank">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </li>
+          </ul>
+      </div> -->
+  <!-- </div>
+</nav> -->
 
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body text-center"  >
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-              class="rounded-circle img-fluid" style="width: 150px;">
-            <h5 class="my-3" >{{tasks.UserName}}</h5>
-            <!-- <p class="text-muted mb-1">Full Stack Developer</p> -->
-            <!-- <p class="text-muted mb-4">Bay Area, San Francisco, CA</p> -->
-            <div class="d-flex justify-content-center mb-2">
-              <!-- <button type="button" class="btn btn-primary" routerLink="/editprofile">Edit</button> -->
-              <!-- <button type="button" class="btn btn-outline-primary ms-1">Message</button> -->
+<!-- <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div> -->
+<div class="main main-raised" >
+<div style="margin-top: 6.2rem;" class="profile-content">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6 ml-auto mr-auto">
+               <div class="profile" id="section">
+                    <div class="avatar">
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/379/329/original/edit-profile-vector-icon.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                    </div>
+                    <div class="name">
+                      <h4>Marketer</h4>
+                      <br>
+                      <p class="text-muted mb-0">English Name:  {{ tasks.nameEn }}</p>
+                      <br>
+                      <p class="text-muted mb-0">Arabic Name: {{ tasks.nameAr }}</p>
+                      <br>
+                      <p class="text-muted mb-0">Email: {{ tasks.email }}</p>
+                      <br>
+                      <p class="text-muted mb-0">Phones: {{ tasks.phones }}</p>
+                      <br>
+                      <p class="">Country: {{ tasks.country }}</p>
+                      <br>
+                      <p class="">City: {{ tasks.city }}</p>
+                      <br>
+                      <p class="">Street: {{ tasks.street }}</p>
+         <br><br>
+          <!-- <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a> -->
+                          <!-- <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a> -->
+                          <!-- <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a> -->
+                    </div>
+                </div>
             </div>
           </div>
-        </div>
-        <div class="card mb-4 mb-lg-0">
-          <div class="card-body p-0">
-            <ul class="list-group list-group-flush rounded-3">
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fas fa-globe fa-lg text-warning"></i>
-                <p class="mb-0">https://www.Gmail.com</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-github fa-lg" style="color: #333333;"></i>
-                <p class="mb-0">http://www.fa-github.com</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
-                <p class="mb-0">http://www.fa-twitter.com</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                <p class="mb-0">http://www.fa-instagram.com</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                <p class="mb-0">http://www.fa-facebook.com/p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <form enctype="multipart/form-data" method="get" [>
-      <div class="col-lg-8">
-        <div class="card mb-4">
-          <div class="card-body">
-            <div class="row">
-              
-              <div class="col-sm-3" >
-                <p class="mb-0">English Name </p>
-              </div>
-              <div class="col-sm-9" >
-                <p class="text-muted mb-0">{{tasks.NameEn}}</p>
-              </div>
-              
-            </div>
-            <hr>
-            <div class="row">
-              
-              <div class="col-sm-3" >
-                <p class="mb-0">Arabic Name </p>
-              </div>
-              <div class="col-sm-9" >
-                <p class="text-muted mb-0">{{tasks.NameEn}}</p>
-              </div>
-              
-            </div>
-            <hr>
+          <div class="description text-center">
            
-           
-            <div class="row" >
-              <div class="col-sm-3" >
-                <p class="mb-0">Email</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{tasks.Email}}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row" >
-              <div class="col-sm-3" >
-                <p class="mb-0">Password</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{tasks.Password}}</p>
-              </div>
-            </div>
-            <hr>
-
-
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{tasks.Phones}}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row" >
-              <div class="col-sm-3">
-                <p class="mb-0">Country</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{tasks.Country}}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row" >
-              <div class="col-sm-3">
-                <p class="mb-0">City</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{tasks.City}}</p>
-              </div>
-            </div>
-            <div class="row" >
-              <div class="col-sm-3">
-                <p class="mb-0">Street</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{tasks.Street}}</p>
-              </div>
-            </div>
-              
-              
-              
-         
+              <p>One of the best advantage of careers in marketing is the job diversity. You can work in advertising, brand promotion, retail, market research, public relations, customer relations and many more. </p>
           </div>
-        
-        </div>
-      
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card mb-4 mb-md-0">
-              <div class="card-body">
-                <p class="mb-4"><span class="text-primary font-italic me-1">My</span> Wallet
-                </p>
-               
-                <!-- <p class="mb-1" style="font-size: .77rem;">Web Design</p> -->
-                <!-- <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div> -->
-                <!-- <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p> -->
-                <!-- <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div> -->
-                <!-- <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p> -->
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-                <!-- <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div> -->
-                <!-- <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                <div class="progress rounded mb-2" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card mb-4 mb-md-0">
-              <div class="card-body">
-                <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                </p>
-                <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                <div class="progress rounded mb-2" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-md-6 ml-auto mr-auto">
+                  <div class="profile-tabs">
+                    <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                      <li class="nav-item" >
+                          <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
+                            <i class="material-icons" >Wallet</i>
+                            Salary
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#works" role="tab" data-toggle="tab">
+                            <i class="material-icons">Profile</i>
+                              Work
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                            <i class="material-icons">favorite</i>
+                              Favorite
+                          </a>
+                      </li>
+                    </ul>
+                  </div>
       </div>
-    </form>
-    </div>
-              
+      </div>
   
-  </div>
-</section>
+    
+
+

@@ -1,9 +1,9 @@
 <section style="background-color: #eee">
   <div class="row">
-    <div class="col-6">
-      <p>Collection NAME {{Collection.nameAr + " / " + Collection.nameEN}}</p>
-      <p>Collection Code {{Collection.code}}</p>
-      <button (click)="Done()"> DONE</button>
+    <div class="col-6" id="details">
+      <p>Collection NAME: {{Collection.nameAr + " / " + Collection.nameEN}}</p>
+      <p>Collection Code: {{Collection.code}}</p>
+      <button (click)="Done()" id="btn"> DONE</button>
     </div>
     <div class="col-6">
       <h3>Your Product Count {{collectionProducts.length}}</h3>

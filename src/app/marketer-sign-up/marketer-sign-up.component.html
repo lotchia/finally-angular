@@ -136,13 +136,14 @@
                         <span *ngIf="form.controls['password'].hasError('required')"></span>
                       </div>
                     </div>
-                    <div class="mb-4">
-                      <div class="form-outline form-white">
-                        <input type="number" id="form3Examplea9" class="form-control form-control-lg" formControlName="taxCard" />
-                        <label class="form-label" for="form3Examplea9">Tax Card</label>
-                        <span *ngIf="form.controls['taxCard'].hasError('required')"></span>
-                      </div>
+                    
+                   
+                    <div class="form-outline form-white">
+                      <input type="file" id="form3Examplea6" class="form-control form-control-lg" formControlName="taxCard" />
+                      <label class="form-label" for="form3Examplea6">Tax Card</label>
+                      <span *ngIf="form.controls['taxCard'].hasError('required')"></span>
                     </div>
+                  
   
                     <div class="form-check d-flex justify-content-start mb-4 pb-3">
                       <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />

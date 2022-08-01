@@ -26,6 +26,7 @@ import { FavouriteComponent } from './Components/Products/favourite/favourite.co
 import { ProductDetailsComponent } from './Components/Products/product-details/product-details.component';
 import { ProductListComponent } from './Components/Products/product-list/product-list.component';
 import { CollectionComponent } from './Components/collection/collection.component';
+import { MarketerWalletComponent } from './marketer-wallet/marketer-wallet.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { CollectionComponent } from './Components/collection/collection.componen
    ProductDetailsComponent,
    ProductListComponent,
    CollectionProductsComponent,
-   CollectionComponent
+   CollectionComponent,
+   MarketerWalletComponent
   ],
   imports: [
     BrowserModule,
