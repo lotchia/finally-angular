@@ -23,6 +23,8 @@ import { UsersignupComponent } from './Components/account/usersignup/usersignup.
 import { LoginComponent } from './Components/account/login/login.component';
 import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
 import { UserProfileComponent } from './Components/account/profile/profile.component';
+import { CollectionComponent } from './Components/collection/collection.component';
+import { MarketerWalletComponent } from './marketer-wallet/marketer-wallet.component';
 
 const routes: Routes = [
   {
@@ -31,19 +33,24 @@ const routes: Routes = [
     children: [
       { path: "profile", component: ProfileComponent },
       { path: "allCollection", component: AllCollectionComponent },
-      { path: "collection/product", component: CollectionProductsComponent },
       { path: "addCollection", component: AddcollectionComponent },
+      {path:"collectionproducts/:id",component:CollectionProductsComponent},
+      {path:"collectiondetails/:id",component:CollectionComponent},
+      {path:"wallet",component:MarketerWalletComponent}
+      
     ]
   },
 
 
   { path: "", redirectTo: "homepage", pathMatch: "full" },
 
-  { path: "marketersignup", component: MarketerSignUpComponent },
-  { path: "marketersignin", component: MarketerSignInComponent },
   { path: 'homepage', component: HomepageComponent },
   { path: 'usersignup', component: UsersignupComponent },
   { path: 'login', component: LoginComponent },
+   {path:"marketersignup",component:MarketerSignUpComponent},
+   {path:"marketersignin",component:MarketerSignInComponent},
+  {path:'profile',component:ProfileComponent},
+  {path:'updateprofile',component:UpdateprofileComponent},
 
   {
     path: 'user',

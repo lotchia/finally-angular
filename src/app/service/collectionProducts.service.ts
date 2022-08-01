@@ -2,9 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { APIViewModel } from '../Models/APIViewModel';
 
-
-
-
 Injectable({
     providedIn: 'root'
   })

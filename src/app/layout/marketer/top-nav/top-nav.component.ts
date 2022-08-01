@@ -18,5 +18,7 @@ export class TopNavComponent implements OnInit {
     
 this.profService.getProfileData().subscribe(res=>this.profService=res.data)
   }
-
+logout(){
+  
+}
 }

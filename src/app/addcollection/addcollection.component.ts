@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { addcollectionViewModel } from '../Models/addcollectionViewMpdel';
-import { FormBuilder, FormGroup, MaxLengthValidator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AccountService } from '../service/Account.service';
 import { CollectionService } from '../service/collection.service';
 import { CollectionEditViewModel } from '../Models/CollectionViewModel';
 
@@ -36,20 +34,16 @@ add(){
 this.collection.addCollection(addCollection).subscribe(res=>{
 
   console.log(res)
-  if (res.success){
+  if (res.success == true){
     console.log(res)
-    this.router.navigateByUrl('/')
+    this.router.navigate(['/marketer/collectionproducts/',res.data.id])
   }
   else{
     console.log(res)
     alert("Try again please")
-    
   }
-
-
-
-
 })
+
   
 }
 }

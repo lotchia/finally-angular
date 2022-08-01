@@ -50,8 +50,8 @@
 import { Component, OnInit } from '@angular/core';
 import { categoryViewModel } from 'src/app/Models/categoryViewModel';
 import { FavouriteEditViewModel } from 'src/app/Models/FavouriteViewModel';
-import { ProductData } from 'src/app/Models/ProductViewModel';
 import { VendorBrandViewModel } from 'src/app/Models/vendorBrandViewModel';
+import { ProductData } from "src/app/Models/productViewModel";
 import { CartService } from 'src/app/service/cart.service';
 import { faviourtService } from 'src/app/service/faviourt.service';
 import { ProductServices } from 'src/app/service/ProductServices';

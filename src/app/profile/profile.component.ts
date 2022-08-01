@@ -18,7 +18,13 @@ export class ProfileComponent implements OnInit {
 
 
     // var id = localStorage.getItem('ID')
-    this.profService.getProfileData().subscribe(res=>this.tasks=res.data )
+    this.profService.getProfileData().subscribe(res=>{this.tasks=res.data
+    console.log(res)
+    
+    
+    } );
+    
+
 
 }
 }

@@ -29,20 +29,27 @@ import { UserSignupViewModel } from './Models/userSignUpViewModel';
 import { UsersignupComponent } from './Components/account/usersignup/usersignup.component';
 import { LoginComponent } from './Components/account/login/login.component';
 import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
+import { CollectionComponent } from './Components/collection/collection.component';
+import { MarketerWalletComponent } from './marketer-wallet/marketer-wallet.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     PageContentComponent,
+    //marketer
     SideNavComponent,
     SideNavTogglerComponent,
     TopNavComponent,
     MarketerMainLayoutComponent,
+    MarketerSignUpComponent,
+    MarketerSignInComponent,
     GetCollectionsComponent,
     GetProductToCollectionsComponent,
     ProfileComponent,
-    MarketerSignUpComponent,
-    MarketerSignInComponent,
+    CollectionProductsComponent,
+    CollectionComponent,
+    MarketerWalletComponent,
     AddcollectionComponent,
     AllCollectionComponent,
     CollectionProductsComponent,
@@ -55,16 +62,15 @@ import { UpdateprofileComponent } from './Components/account/updateprofile/updat
     UpdateprofileComponent,
     CartComponent,
     FavouriteComponent,
-   ProductDetailsComponent,
-   ProductListComponent,
-
+    ProductDetailsComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     HttpClientModule,
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

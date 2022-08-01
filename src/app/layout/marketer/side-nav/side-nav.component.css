@@ -1,11 +1,11 @@
-:host {
+/* :host {
     background: #343a40;
-  }
+  } */
   
   #sidebar {
   min-width: 200px;
   max-width: 200px;
-  min-height: 100vh;
+  min-height: 170vh;
   color: #fff;
   transition: all 0.3s;
   font-weight: 300;
@@ -65,7 +65,7 @@
   .vanbar
 {
   background-color: #163a3a;
-  height: 750px;
+  height: 200vh;
   width: 200px;
 }
 .header
