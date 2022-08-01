@@ -12,10 +12,8 @@ import { GetCollectionsComponent } from './Components/Marketer/get-collections/g
 import { PageContentComponent } from './layout/page-content/page-content.component';
 import { SharedModule } from './shard/shared.module';
 import { HomepageComponent } from './Components/homepage/homepage.component';
-import { GetProductToCollectionsComponent } from './Components/Products/get-product-to-collections/get-product-to-collections.component';
 import { ProfileComponent } from './Components/account/profile/profile.component';
 import { MarketerSignUpComponent } from './Components/account/marketer-sign-up/marketer-sign-up.component';
-import { MarketerSignInComponent } from './Components/account/marketer-sign-in/marketer-sign-in.component';
 import { AddcollectionComponent } from './Components/Marketer/addcollection/addcollection.component';
 import { AllCollectionComponent } from './Components/Marketer/all-collection/all-collection.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -32,6 +30,7 @@ import { UpdateprofileComponent } from './Components/account/updateprofile/updat
 import { CollectionComponent } from './Components/Marketer/collection/collection.component';
 import { MarketerWalletComponent } from './Components/Marketer/marketer-wallet/marketer-wallet.component';
 import { MarketerHomeComponent } from './Components/Marketer/marketer-home/marketer-home.component';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -44,9 +43,7 @@ import { MarketerHomeComponent } from './Components/Marketer/marketer-home/marke
     TopNavComponent,
     MarketerMainLayoutComponent,
     MarketerSignUpComponent,
-    MarketerSignInComponent,
     GetCollectionsComponent,
-    GetProductToCollectionsComponent,
     ProfileComponent,
     CollectionProductsComponent,
     CollectionComponent,
@@ -66,6 +63,7 @@ import { MarketerHomeComponent } from './Components/Marketer/marketer-home/marke
     ProductDetailsComponent,
     ProductListComponent,
     MarketerHomeComponent,
+    IntroComponent,
   ],
   imports: [
     BrowserModule,

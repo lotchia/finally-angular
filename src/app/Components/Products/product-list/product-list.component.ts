@@ -156,8 +156,9 @@ export class ProductListComponent implements OnInit {
     data.ProductID = item.id;
     data.UserID = localStorage.getItem("id") ?? "";
     this.faviourtService.addtofaviourt(data).subscribe(res => {
+      console.log(res)
+      window.location.reload();
     });
-    window.location.reload();
   }
 
   onTableDataChange(event: any) {
