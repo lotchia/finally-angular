@@ -1,78 +1,120 @@
-<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
-  <div class="card p-4"> 
-    <div class=" image d-flex flex-column justify-content-center align-items-center"> 
-        <button class="btn btn-secondary"> <img src="{{userdetails.img}}" height="100" width="100" /></button>
-         <span class="name mt-3">{{userdetails.nameEn}}</span>
-          <span class="idd">@{{userdetails.userName}}</span>
-           <div class="d-flex flex-row justify-content-center align-items-center gap-2"> 
-               <span class="idd1">{{userdetails.email}}</span> <span><i class="fa fa-copy"></i></span>
-                </div> 
-                <div class="d-flex flex-row justify-content-center align-items-center mt-3"> 
-                    
-                    <span class="number">Name Ar
-                        <span class="follow">{{userdetails.nameAr}}</span>
-                    </span>
-                    <span class="number">Email
-                        <span class="follow">{{userdetails.email}}</span>
-                    </span>
-                   
-                    <span class="number">phone
-                        <span class="follow">{{userdetails.phones[0]}}</span>
-                    </span>
-                      <span class="number">City
-                        <span class="follow">{{userdetails.city}}</span>
-                    </span>
-                    <span class="number">Country
-                        <span class="follow">{{userdetails.country}}</span>
-                    </span>
-                    <span class="number">Street
-                        <span class="follow">{{userdetails.street}}</span>
-                    </span>
+<!-- <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg "  color-on-scroll="20"  id="sectionsNav">
+  <div class="container"> -->
+      <!-- <div class="navbar-translate"> -->
+          <!-- <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html" target="_blank">Material Kit </a> -->
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div> -->
+  
+      <!-- <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+              <li class="dropdown nav-item">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons">apps</i> Components
+                </a>
+                <div class="dropdown-menu dropdown-with-icons">
+                  <a href="../index.html" class="dropdown-item">
+                      <i class="material-icons">layers</i> All Components
+                  </a>
+                  
+                  <a href="https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">
+                      <i class="material-icons">content_paste</i> Documentation
+                  </a>
                 </div>
-                     <div class=" d-flex mt-2">
-                         <button class="btn1 btn-dark" [routerLink]="['/user/updateprofile',userdetails.id]">Edit Profile</button> 
-                        </div> 
-                     
-                          <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span>
-                              <i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i class="fa fa-instagram"></i></span> 
-                              <span><i class="fa fa-linkedin"></i></span> </div>
-                               <div class=" px-2 rounded mt-4 date ">
-                                   <span class="join">Joined augest,2022</span> 
-    </div> 
- </div>
-</div>
-</div>
+              </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">
+            <i class="material-icons">cloud_download</i> Download
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/CreativeTim" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/CreativeTim" target="_blank">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </li>
+          </ul>
+      </div> -->
+  <!-- </div>
+</nav> -->
+
+<!-- <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div> -->
+<div class="main main-raised" >
+<div style="margin-top: 6.2rem;" class="profile-content">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6 ml-auto mr-auto">
+               <div class="profile" id="section">
+                    <div class="avatar">
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/379/329/original/edit-profile-vector-icon.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                    </div>
+                    <div class="name">
+                      <h4>Marketer</h4>
+                      <br>
+                      <p class="text-muted mb-0">English Name:  {{ tasks.nameEn }}</p>
+                      <br>
+                      <p class="text-muted mb-0">Arabic Name: {{ tasks.nameAr }}</p>
+                      <br>
+                      <p class="text-muted mb-0">Email: {{ tasks.email }}</p>
+                      <br>
+                      <p class="text-muted mb-0">Phones: {{ tasks.phones }}</p>
+                      <br>
+                      <p class="">Country: {{ tasks.country }}</p>
+                      <br>
+                      <p class="">City: {{ tasks.city }}</p>
+                      <br>
+                      <p class="">Street: {{ tasks.street }}</p>
+         <br><br>
+          <!-- <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a> -->
+                          <!-- <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a> -->
+                          <!-- <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a> -->
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="description text-center">
+           
+              <p>One of the best advantage of careers in marketing is the job diversity. You can work in advertising, brand promotion, retail, market research, public relations, customer relations and many more. </p>
+          </div>
+  <div class="row">
+    <div class="col-md-6 ml-auto mr-auto">
+                  <div class="profile-tabs">
+                    <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                      <li class="nav-item" >
+                          <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
+                            <i class="material-icons" >Wallet</i>
+                            Salary
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#works" role="tab" data-toggle="tab">
+                            <i class="material-icons">Profile</i>
+                              Work
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                            <i class="material-icons">favorite</i>
+                              Favorite
+                          </a>
+                      </li>
+                    </ul>
+                  </div>
+      </div>
+      </div>
+  
+    
 
 
-
-
-
-<div>
-    <!-- <div class="section1">
-         <div><img src="{{userdetails.Img}}"/></div>
-         <div><h1>{{userdetails.NameEn}}</h1></div>
-    </div>
-    <div class="section2">
-        <div class="form">
-        <div class="d-flex">
-        <div>
-          <h1>Name En:</h1>
-          <h1>Name Ar</h1>
-          <h1>Email</h1>
-          <h1>password</h1>
-         <h1>phone</h1>
-        </div>
-        <div>
-            <h5>{{userdetails.NameEn}}</h5>
-            <h5>{{userdetails.NameAr}}</h5>
-            <h5>{{userdetails.Email}}</h5>
-            <h5>{{userdetails.password}}</h5>
-            <h5>{{userdetails.phone}}</h5>
-        </div>
-    </div>
-</div>
-    <button class="btn btn-primary"[routerLink]="['/updateprofile',userdetails.id]">Update</button>
-    <button class="btn btn-primary btns">cancle</button>
-
-   
-</div> -->

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CollectionEditViewModel, CollectionViewModel } from '../Models/CollectionViewModel';
-import { CollectionService } from '../service/collection.service';
+import { CollectionEditViewModel, CollectionViewModel } from '../../../Models/CollectionViewModel';
+import { CollectionService } from '../../../service/collection.service';
 
 @Component({
   selector: 'app-all-collection',

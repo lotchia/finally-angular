@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Wallet } from '../Models/Wallet';
-import { MarketerService } from '../service/marketer.service';
+import { Wallet } from '../../../Models/Wallet';
+import { MarketerService } from '../../../service/marketer.service';
 @Component({
   selector: 'app-marketer-wallet',
   templateUrl: './marketer-wallet.component.html',

@@ -6,31 +6,34 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FavouriteComponent } from './Components/Products/favourite/favourite.component';
 import { ProductDetailsComponent } from './Components/Products/product-details/product-details.component';
-import { HomepageComponent } from './Components/Products/homepage/homepage.component';
+import { HomepageComponent } from './Components/homepage/homepage.component';
 import { ProductListComponent } from './Components/Products/product-list/product-list.component';
 import { CartComponent } from './Components/Products/cart/cart.component';
 import { SideNavComponent } from './layout/marketer/side-nav/side-nav.component';
 import { TopNavComponent } from './layout/marketer/top-nav/top-nav.component';
-import { ProfileComponent } from './profile/profile.component';
-import { MarketerSignUpComponent } from './marketer-sign-up/marketer-sign-up.component';
-import { MarketerSignInComponent } from './marketer-sign-in/marketer-sign-in.component';
-import { AddcollectionComponent } from './addcollection/addcollection.component';
-import { AllCollectionComponent } from './all-collection/all-collection.component';
-import { CollectionProductsComponent } from './Components/collection-products/collection-products.component';
+import { ProfileComponent } from './Components/account/profile/profile.component';
+import { MarketerSignUpComponent } from './Components/account/marketer-sign-up/marketer-sign-up.component';
+import { MarketerSignInComponent } from './Components/account/marketer-sign-in/marketer-sign-in.component';
+import { AddcollectionComponent } from './Components/Marketer/addcollection/addcollection.component';
+import { AllCollectionComponent } from './Components/Marketer/all-collection/all-collection.component';
+import { CollectionProductsComponent } from './Components/Marketer/collection-products/collection-products.component';
 
 
 import { UsersignupComponent } from './Components/account/usersignup/usersignup.component';
 import { LoginComponent } from './Components/account/login/login.component';
 import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
-import { UserProfileComponent } from './Components/account/profile/profile.component';
-import { CollectionComponent } from './Components/collection/collection.component';
-import { MarketerWalletComponent } from './marketer-wallet/marketer-wallet.component';
+import { UserProfileComponent } from './Components/account/userprofile/userprofile.component';
+import { CollectionComponent } from './Components/Marketer/collection/collection.component';
+import { MarketerWalletComponent } from './Components/Marketer/marketer-wallet/marketer-wallet.component';
+import { MarketerHomeComponent } from './Components/Marketer/marketer-home/marketer-home.component';
 
 const routes: Routes = [
   {
     path: 'marketer',
     component: MarketerMainLayoutComponent,
     children: [
+      { path: "", redirectTo:"home",pathMatch:"full" },
+      { path: "home", component: MarketerHomeComponent },
       { path: "profile", component: ProfileComponent },
       { path: "allCollection", component: AllCollectionComponent },
       { path: "addCollection", component: AddcollectionComponent },

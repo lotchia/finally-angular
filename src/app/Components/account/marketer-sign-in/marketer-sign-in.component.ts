@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, MaxLengthValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginResultViewModel, LoginViewModel } from '../Models/Acount';
-import { AccountService } from '../service/Account.service';
+import { LoginResultViewModel, LoginViewModel } from '../../../Models/Acount';
+import { AccountService } from '../../../service/Account.service';
 
 @Component({
   selector: 'app-marketer-sign-in',
@@ -34,8 +34,9 @@ RememberMe:[true],
         localStorage.setItem("token",res.token)
         localStorage.setItem("id",res.id)
         localStorage.setItem("role",res.role)
+        localStorage.setItem("username",SignIn.Email)
         
-        this.router.navigateByUrl('/marketer')
+        this.router.navigateByUrl('/marketer/home')
       }
       else{
         console.log(res)

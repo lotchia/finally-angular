@@ -1,0 +1,78 @@
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+  <div class="card p-4"> 
+    <div class=" image d-flex flex-column justify-content-center align-items-center"> 
+        <button class="btn btn-secondary"> <img src="{{userdetails.img}}" height="100" width="100" /></button>
+         <span class="name mt-3">{{userdetails.nameEn}}</span>
+          <span class="idd">@{{userdetails.userName}}</span>
+           <div class="d-flex flex-row justify-content-center align-items-center gap-2"> 
+               <span class="idd1">{{userdetails.email}}</span> <span><i class="fa fa-copy"></i></span>
+                </div> 
+                <div class="d-flex flex-row justify-content-center align-items-center mt-3"> 
+                    
+                    <span class="number">Name Ar
+                        <span class="follow">{{userdetails.nameAr}}</span>
+                    </span>
+                    <span class="number">Email
+                        <span class="follow">{{userdetails.email}}</span>
+                    </span>
+                   
+                    <span class="number">phone
+                        <span class="follow">{{userdetails.phones[0]}}</span>
+                    </span>
+                      <span class="number">City
+                        <span class="follow">{{userdetails.city}}</span>
+                    </span>
+                    <span class="number">Country
+                        <span class="follow">{{userdetails.country}}</span>
+                    </span>
+                    <span class="number">Street
+                        <span class="follow">{{userdetails.street}}</span>
+                    </span>
+                </div>
+                     <div class=" d-flex mt-2">
+                         <button class="btn1 btn-dark" [routerLink]="['/user/updateprofile',userdetails.id]">Edit Profile</button> 
+                        </div> 
+                     
+                          <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span>
+                              <i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i class="fa fa-instagram"></i></span> 
+                              <span><i class="fa fa-linkedin"></i></span> </div>
+                               <div class=" px-2 rounded mt-4 date ">
+                                   <span class="join">Joined augest,2022</span> 
+    </div> 
+ </div>
+</div>
+</div>
+
+
+
+
+
+<div>
+    <!-- <div class="section1">
+         <div><img src="{{userdetails.Img}}"/></div>
+         <div><h1>{{userdetails.NameEn}}</h1></div>
+    </div>
+    <div class="section2">
+        <div class="form">
+        <div class="d-flex">
+        <div>
+          <h1>Name En:</h1>
+          <h1>Name Ar</h1>
+          <h1>Email</h1>
+          <h1>password</h1>
+         <h1>phone</h1>
+        </div>
+        <div>
+            <h5>{{userdetails.NameEn}}</h5>
+            <h5>{{userdetails.NameAr}}</h5>
+            <h5>{{userdetails.Email}}</h5>
+            <h5>{{userdetails.password}}</h5>
+            <h5>{{userdetails.phone}}</h5>
+        </div>
+    </div>
+</div>
+    <button class="btn btn-primary"[routerLink]="['/updateprofile',userdetails.id]">Update</button>
+    <button class="btn btn-primary btns">cancle</button>
+
+   
+</div> -->

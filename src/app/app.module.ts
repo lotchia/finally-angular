@@ -8,29 +8,30 @@ import { UserMainLayoutComponent } from './layout/user/user-main-layout/user-mai
 import { NavComponent } from './layout/user/nav/nav.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { GetCollectionsComponent } from './Components/get-collections/get-collections.component';
+import { GetCollectionsComponent } from './Components/Marketer/get-collections/get-collections.component';
 import { PageContentComponent } from './layout/page-content/page-content.component';
 import { SharedModule } from './shard/shared.module';
-import { HomepageComponent } from './Components/Products/homepage/homepage.component';
+import { HomepageComponent } from './Components/homepage/homepage.component';
 import { GetProductToCollectionsComponent } from './Components/Products/get-product-to-collections/get-product-to-collections.component';
-import { ProfileComponent } from './profile/profile.component';
-import { MarketerSignUpComponent } from './marketer-sign-up/marketer-sign-up.component';
-import { MarketerSignInComponent } from './marketer-sign-in/marketer-sign-in.component';
-import { AddcollectionComponent } from './addcollection/addcollection.component';
-import { AllCollectionComponent } from './all-collection/all-collection.component';
+import { ProfileComponent } from './Components/account/profile/profile.component';
+import { MarketerSignUpComponent } from './Components/account/marketer-sign-up/marketer-sign-up.component';
+import { MarketerSignInComponent } from './Components/account/marketer-sign-in/marketer-sign-in.component';
+import { AddcollectionComponent } from './Components/Marketer/addcollection/addcollection.component';
+import { AllCollectionComponent } from './Components/Marketer/all-collection/all-collection.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CollectionProductsComponent } from './Components/collection-products/collection-products.component';
+import { CollectionProductsComponent } from './Components/Marketer/collection-products/collection-products.component';
 import { CartComponent } from './Components/Products/cart/cart.component';
 import { FavouriteComponent } from './Components/Products/favourite/favourite.component';
 import { ProductDetailsComponent } from './Components/Products/product-details/product-details.component';
 import { ProductListComponent } from './Components/Products/product-list/product-list.component';
-import { UserProfileComponent } from './Components/account/profile/profile.component';
+import { UserProfileComponent } from './Components/account/userprofile/userprofile.component';
 import { UserSignupViewModel } from './Models/userSignUpViewModel';
 import { UsersignupComponent } from './Components/account/usersignup/usersignup.component';
 import { LoginComponent } from './Components/account/login/login.component';
 import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
-import { CollectionComponent } from './Components/collection/collection.component';
-import { MarketerWalletComponent } from './marketer-wallet/marketer-wallet.component';
+import { CollectionComponent } from './Components/Marketer/collection/collection.component';
+import { MarketerWalletComponent } from './Components/Marketer/marketer-wallet/marketer-wallet.component';
+import { MarketerHomeComponent } from './Components/Marketer/marketer-home/marketer-home.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { MarketerWalletComponent } from './marketer-wallet/marketer-wallet.compo
     FavouriteComponent,
     ProductDetailsComponent,
     ProductListComponent,
+    MarketerHomeComponent,
   ],
   imports: [
     BrowserModule,

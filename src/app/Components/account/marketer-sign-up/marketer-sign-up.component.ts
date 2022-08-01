@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserMarketerSignupViewModel } from '../Models/UserMarketerViewModel';
-import { AccountService } from '../service/Account.service';
+import { UserMarketerSignupViewModel } from '../../../Models/UserMarketerViewModel';
+import { AccountService } from '../../../service/Account.service';
 
 @Component({
   selector: 'app-marketer-sign-up',
