@@ -22,48 +22,46 @@ import { CollectionProductsComponent } from './Components/collection-products/co
 import { UsersignupComponent } from './Components/account/usersignup/usersignup.component';
 import { LoginComponent } from './Components/account/login/login.component';
 import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
+import { UserProfileComponent } from './Components/account/profile/profile.component';
 
 const routes: Routes = [
   {
     path: 'marketer',
     component: MarketerMainLayoutComponent,
-    children:[
-      {path:"profile",component:ProfileComponent},
-      {path:"allCollection",component:AllCollectionComponent},
-      {path:"collection/product",component:CollectionProductsComponent},
-      {path:"addCollection",component:AddcollectionComponent},
+    children: [
+      { path: "profile", component: ProfileComponent },
+      { path: "allCollection", component: AllCollectionComponent },
+      { path: "collection/product", component: CollectionProductsComponent },
+      { path: "addCollection", component: AddcollectionComponent },
     ]
-   },
-    
+  },
 
-  {path:"",redirectTo:"homepage",pathMatch:"full"},
 
-   {path:"marketersignup",component:MarketerSignUpComponent},
-   {path:"marketersignin",component:MarketerSignInComponent},
-  
-  {path:'usersignup',component:UsersignupComponent},
-  {path:'login',component:LoginComponent},
-  {path:'homepage',component:HomepageComponent},
-  {path:'profile',component:ProfileComponent},
-  {path:'updateprofile',component:UpdateprofileComponent},
+  { path: "", redirectTo: "homepage", pathMatch: "full" },
+
+  { path: "marketersignup", component: MarketerSignUpComponent },
+  { path: "marketersignin", component: MarketerSignInComponent },
+  { path: 'homepage', component: HomepageComponent },
+  { path: 'usersignup', component: UsersignupComponent },
+  { path: 'login', component: LoginComponent },
 
   {
     path: 'user',
     component: UserMainLayoutComponent,
     children: [
-      // { path: '', component: HomepageComponent },
-      {path:'favourite',component:FavouriteComponent},
-      {path:'get-product-to-collection',component:GetProductToCollectionsComponent},
-      {path:'product-list',component:ProductListComponent},
-      {path:'cart',component:CartComponent},
-      {path:'homepage',component:HomepageComponent},
-      {path:'product-details/:id',component:ProductDetailsComponent},
+      { path: "", redirectTo: "product-list", pathMatch: "full" },
+      { path: 'profile', component: UserProfileComponent },
+      { path: 'updateprofile/:id', component: UpdateprofileComponent },
+      { path: 'favourite', component: FavouriteComponent },
+      { path: 'get-product-to-collection', component: GetProductToCollectionsComponent },
+      { path: 'product-list', component: ProductListComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'homepage', component: HomepageComponent },
+      { path: 'product-details/:id', component: ProductDetailsComponent },
     ]
-   
-    
   },
 
-  
+
 ];
 
 @NgModule({

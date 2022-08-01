@@ -42,6 +42,7 @@ export class ProductDetailsComponent implements OnInit {
       this.cartservice.addtocart(val).subscribe(res=>{
         console.log(res)
       });
+      window.location.reload();
    }
   }
   

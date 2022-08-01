@@ -4,11 +4,11 @@
     left: 2rem;
     top: 0rem;
   }
-  nav ul {
+  nav .ul {
    margin-left: 200px;
   }
 
-nav ul li a {
+nav .ul li a {
   text-decoration: none;
   color: #0066ff;
   text-align: center;
@@ -17,7 +17,7 @@ nav ul li a {
   width: 150px;
   
 }
-nav ul li a:hover {
+nav .ul li a:hover {
   background-color: #0066ff;
   color: #ffffff;
   border-bottom: 0.1rem solid #000d21;
@@ -29,7 +29,42 @@ nav ul li a:hover {
   color: #0d0043;
   border-bottom: 0.1rem solid #003b42;
 }
-nav form input {
+form{
+ margin-right: auto;
+}
+form a{
+  padding: 15px;
+}
+.carticon 
+{
+    font-size: 30px;
+    margin-top: 15px;
+    
+}
+.hearticon 
+{
+    
+  font-size: 30px;
+  margin-top: 15px;
+
+} 
+
+.badge
+{
+    font-size: 10px;
+    margin-top: 15px;
+}
+.usericon{
+  text-decoration: none !important;
+  color: #0066ff !important;
+  text-align: center !important;
+  padding: 0.5rem !important;
+  transition: linear !important;
+  width: 150px !important;
+  
+ 
+}
+/* nav form input {
   border: none;
   border-radius: 2rem;
   background-color: none;
@@ -59,30 +94,12 @@ width: 22px;
   margin-left: -2rem;
   margin-bottom: -0.3rem;
   cursor: pointer;
-}
-.enterLogin{
+} */
+/* .enterLogin{
   max-width: 2rem;
   margin-left: 5rem;
   cursor: pointer;
 
-}
+} */
 
-.carticon 
-{
-    font-size: 30px;
-    margin-top: 15px;
-    
-}
-.hearticon 
-{
-    
-  font-size: 30px;
-  margin-top: 15px;
 
-} 
-
-.badge
-{
-    font-size: 10px;
-    margin-top: 15px;
-}

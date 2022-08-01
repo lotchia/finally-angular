@@ -20,24 +20,25 @@ import { AddcollectionComponent } from './addcollection/addcollection.component'
 import { AllCollectionComponent } from './all-collection/all-collection.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CollectionProductsComponent } from './Components/collection-products/collection-products.component';
-import { AccountModule } from './Components/account/account.module';
 import { CartComponent } from './Components/Products/cart/cart.component';
 import { FavouriteComponent } from './Components/Products/favourite/favourite.component';
 import { ProductDetailsComponent } from './Components/Products/product-details/product-details.component';
 import { ProductListComponent } from './Components/Products/product-list/product-list.component';
-
+import { UserProfileComponent } from './Components/account/profile/profile.component';
+import { UserSignupViewModel } from './Models/userSignUpViewModel';
+import { UsersignupComponent } from './Components/account/usersignup/usersignup.component';
+import { LoginComponent } from './Components/account/login/login.component';
+import { UpdateprofileComponent } from './Components/account/updateprofile/updateprofile.component';
 @NgModule({
   declarations: [
     AppComponent,
+    HomepageComponent,
+    PageContentComponent,
     SideNavComponent,
     SideNavTogglerComponent,
     TopNavComponent,
     MarketerMainLayoutComponent,
-    NavComponent,
-    UserMainLayoutComponent,
     GetCollectionsComponent,
-    PageContentComponent,
-    HomepageComponent,
     GetProductToCollectionsComponent,
     ProfileComponent,
     MarketerSignUpComponent,
@@ -45,17 +46,24 @@ import { ProductListComponent } from './Components/Products/product-list/product
     AddcollectionComponent,
     AllCollectionComponent,
     CollectionProductsComponent,
+    /////USER
+    NavComponent,
+    UserMainLayoutComponent,
+    UsersignupComponent,
+    LoginComponent,
+    UserProfileComponent,
+    UpdateprofileComponent,
     CartComponent,
     FavouriteComponent,
    ProductDetailsComponent,
    ProductListComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     HttpClientModule,
-    AccountModule
     ],
   providers: [],
   bootstrap: [AppComponent]

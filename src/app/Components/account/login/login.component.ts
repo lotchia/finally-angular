@@ -35,8 +35,8 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('username', value.Email);
         localStorage.setItem('role', res.role);
         localStorage.setItem("id", res.id);
-        if (res.role == "User") { this.router.navigateByUrl("/profile") }
-        else { this.router.navigateByUrl("/marketer/updateprofile") }
+        if (res.role == "User") { this.router.navigateByUrl("/user/product-list") }
+        else { this.router.navigateByUrl("/marketer/profile") }
       } else {
         alert("try Again !!!!")
       }

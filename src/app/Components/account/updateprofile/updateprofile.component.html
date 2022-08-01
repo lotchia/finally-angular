@@ -1,5 +1,97 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" 
+                src="../../../../assets/image/user.png"><span class="font-weight-bold">{{oldData.userName}}</span>
+                <span class="text-black-50">{{oldData.email}}</span><span> </span></div>
+        </div>
+        <form [formGroup]="updateform">
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name EN</label>
+                        <input type="text" class="form-control" formControlName="nameEn"></div>
+                    <div class="col-md-6"><label class="labels">Name Er</label>
+                        <input type="text" class="form-control" formControlName="nameAr" ></div>
+                        <input type="hidden" formControlName="id">
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Email </label>
+                        <input type="text" class="form-control" formControlName="email"></div>
+                    <div class="col-md-12"><label class="labels">Password </label>
+                        <input type="text" class="form-control"formControlName="password"></div>
+                    <div class="col-md-12"><label class="labels">Mobile Number</label>
+                        <input type="text" class="form-control" formControlName="phone"></div>
+                    <div class="col-md-12"><label class="labels">Country</label>
+                        <input type="text" class="form-control"  formControlName="country"></div>
+                    <div class="col-md-12"><label class="labels">City</label>
+                        <input type="text" class="form-control"  formControlName="city"></div>
+                    <div class="col-md-12"><label class="labels">Street</label>
+                        <input type="text" class="form-control"  formControlName="street"></div>
+                   
+                </div>
+                <div class="mt-5 text-center" (click)="edit()">
+                    <button class="btn btn-primary profile-button" type="button">Save Profile</button>
+                </div>
+            </div>
+        </div>
+    </form>
+       
+    </div>
+</div>
 
-    <div class="section1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="section1">
         <div class="section2">
             <form [formGroup]="updateform">
                 <img src=""/>
@@ -58,7 +150,7 @@
 
             </form>
     
-      
+       -->
     
    
 

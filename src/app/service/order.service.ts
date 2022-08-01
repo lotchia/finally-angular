@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { APIViewModel } from '../Models/APIViewModel';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,9 @@ public orderid:any=[];
 
   order(userid:string){
   
-    return this.http.post<any>("https://localhost:63000/Order/AddApi",{UserID:userid})
+    return this.http.post<APIViewModel>("https://localhost:63000/Order/AddApi",{UserID:userid})
   }
   orderdetails(orderid:string){
-    return this.http.get<any>("https://localhost:63000/OrderDetails/Add")
+    return this.http.get<APIViewModel>("https://localhost:63000/OrderDetails/Add")
   }
 }

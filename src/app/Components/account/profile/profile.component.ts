@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SafeResourceUrl } from '@angular/platform-browser';
+import { UserUpdateViewModel } from 'src/app/Models/userupdateViewModel';
 import { AccountService } from 'src/app/service/Account.service';
 
 @Component({
@@ -6,20 +8,19 @@ import { AccountService } from 'src/app/service/Account.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
-  id:any;
-  userdetails :any =[];
-  constructor(private accountservice:AccountService) { }
+export class UserProfileComponent implements OnInit {
+  id: string="";
+  userdetails: any;
+  // userdetails: UserUpdateViewModel = new  UserUpdateViewModel();
+  constructor(private accountservice: AccountService) { }
 
   ngOnInit(): void {
-this.accountservice.getinfo(this.id).subscribe
-(res=>{this.userdetails=res;
-})
+    this.id = localStorage.getItem("id")??""
+    this.accountservice.getinfo(this.id).subscribe
+      (res => {
+        console.log(res)
+        this.userdetails = res.data;
+      })
 
-  }
-  getinfo(){
-    this.accountservice.getinfo(this.id).subscribe(res=>{
-      console.log(res)
-    });
   }
 }
