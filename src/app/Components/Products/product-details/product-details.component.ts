@@ -35,6 +35,10 @@ export class ProductDetailsComponent implements OnInit {
          console.log(this.searchtext)
     }
     addtocart(item :ProductData){
+      if(localStorage.getItem("id") == null){
+        alert("Dear Client you must be sign in")
+      }
+      else{
       console.log(item);
       let val  = new cartEditViewModel();
       val.ProductID  =item.id;
@@ -42,7 +46,7 @@ export class ProductDetailsComponent implements OnInit {
       this.cartservice.addtocart(val).subscribe(res=>{
         console.log(res)
       });
-      window.location.reload();
+      window.location.reload();}
    }
   }
   

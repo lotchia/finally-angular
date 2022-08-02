@@ -152,13 +152,17 @@ export class ProductListComponent implements OnInit {
     )
   }
   addtofavourit(item: ProductData) {
+    if(localStorage.getItem("id") == null){
+      alert("Dear Client you must be sign in")
+    }
+    else{
     let data = new FavouriteEditViewModel;
     data.ProductID = item.id;
     data.UserID = localStorage.getItem("id") ?? "";
     this.faviourtService.addtofaviourt(data).subscribe(res => {
       console.log(res)
       window.location.reload();
-    });
+    });}
   }
 
   onTableDataChange(event: any) {

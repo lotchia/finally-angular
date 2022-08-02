@@ -1,0 +1,31 @@
+<div class="container">
+  <form enctype="multipart/form-data" [formGroup]="form">
+    <label for="code"
+      >Code :
+      <input
+        type="text"
+        name="Code"
+        id="code"
+        formControlName="Code"
+        class="form-control"
+      />
+    </label>
+    <input type="submit" value="Submit" (submit)="Get()" />
+  </form>
+  <div class="row text-center col-9 mt-5">
+    <div class="col-4" *ngFor="let item of productlist">
+      <div class="card">
+        <img class="card-img" src="" />
+        <!-- https://localhost:63000{{item.images[0]}} -->
+        <div class="card-body">
+          <h1>{{ item.nameEn }}</h1>
+          <p>{{ item.description }}</p>
+          <p>{{ item.price }} $</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="" >
+<button (click)="order()" class="btn btn-lg btn-info">Make an Order</button>
+  </div>
+</div>

@@ -23,6 +23,7 @@ import { MarketerHomeComponent } from './Components/Marketer/marketer-home/marke
 import { IntroComponent } from './intro/intro.component';
 import { AuthGuard } from './guard/auth.guard';
 import { IsMarketerGuard } from './guard/is-marketer.guard';
+import { IsUserGuard } from './guard/is-user.guard';
 
 const routes: Routes = [
   { path: "", redirectTo: "homepage", pathMatch: "full" },
@@ -53,11 +54,11 @@ const routes: Routes = [
     component: UserMainLayoutComponent,
     children: [
       { path: "", redirectTo: "product-list", pathMatch: "full" },
-      { path: 'profile', component: UserProfileComponent },
-      { path: 'updateprofile/:id', component: UpdateprofileComponent },
-      { path: 'favourite', component: FavouriteComponent },
+      { path: 'profile', component: UserProfileComponent  ,canActivate:[AuthGuard,IsUserGuard]},
+      { path: 'updateprofile/:id', component: UpdateprofileComponent,canActivate:[AuthGuard,IsUserGuard] },
+      { path: 'favourite', component: FavouriteComponent,canActivate:[AuthGuard,IsUserGuard] },
       { path: 'product-list', component: ProductListComponent },
-      { path: 'cart', component: CartComponent },
+      { path: 'cart', component: CartComponent ,canActivate:[AuthGuard,IsUserGuard]},
       { path: 'product-details/:id', component: ProductDetailsComponent },
     ]
   },
