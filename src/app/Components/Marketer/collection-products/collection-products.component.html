@@ -12,7 +12,8 @@
   </div>
     <div class="container py-5">
       <div class="row justify-content-center" >
-        <div class="col-md-8 col-lg-6 col-xl-4" *ngFor="let item of productlist  | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
+        <div class="col-md-8 col-lg-6 col-xl-4" *ngFor="let item of productlist  | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}"
+        ngIf="!loading">
           <div class="card text-black">
             <input type="checkbox" (change)="check(item.id,item.nameEn,$event)" class="ckeckbox">
             <!-- <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i> -->
@@ -47,6 +48,10 @@
             </div>
           </div>
         </div>
+            <!-- spinner -->
+       <div class="text-center w-100" *ngIf="loading">
+        <app-spinner></app-spinner>
+       </div>
       </div>
     </div>
   </section>
