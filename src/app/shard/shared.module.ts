@@ -6,6 +6,7 @@ import { RouterModule } from "@angular/router";
 import { NgxPaginationModule } from "ngx-pagination";
 
 
+
 @NgModule({
   declarations: [],
   imports: [
@@ -15,6 +16,7 @@ import { NgxPaginationModule } from "ngx-pagination";
     NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule,
+   
     
   ],
   exports:[
@@ -23,7 +25,8 @@ import { NgxPaginationModule } from "ngx-pagination";
     NgxPaginationModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  
   ]
 })
 export class SharedModule { }

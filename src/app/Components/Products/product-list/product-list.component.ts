@@ -101,6 +101,7 @@ export class ProductListComponent implements OnInit {
   }
 
   filterBrand(userID :string){
+    this.loading=true;
     this.page = 1;
     console.log(userID)
     this.productservice.getproductbyVendor(userID).subscribe(res => {
@@ -109,9 +110,11 @@ export class ProductListComponent implements OnInit {
       this.page = res.data.pageIndex;
       this.tableSize = res.data.pageSize;
       this.count = res.data.count;
+      this.loading=false;
     })
   }
   filtercategoty(Catid: number) {
+    this.loading=true;
     this.page = 1;
     console.log(Catid)
     this.productservice.getproductbycategoty(Catid).subscribe(res => {
@@ -120,8 +123,8 @@ export class ProductListComponent implements OnInit {
       this.page = res.data.pageIndex;
       this.tableSize = res.data.pageSize;
       this.count = res.data.count;
+      this.loading=false;
     })
-
   }
 
   filter(value: string) {

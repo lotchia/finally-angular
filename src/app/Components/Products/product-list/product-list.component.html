@@ -26,7 +26,8 @@
     <div class="row text-center col-9 mt-5">
 
 
-      <div class="col-4 "  *ngFor="let item of productlist  | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
+      <div class="col-4 "  *ngFor="let item of productlist  | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}"
+      ngIf="!loading">
         <div class="card ">
           <button class="btn " (click)="addtofavourit(item)"><i class="fa fa-solid fa-heart hearticon"></i></button>
           <img class="card-img" src="" />
@@ -53,7 +54,14 @@
 
         </div>
 
-      </div>
+       </div> 
+       <!-- spinner -->
+       <div class="text-center w-100" *ngIf="loading">
+        <app-spinner></app-spinner>
+       </div>
+
+
+
     </div>
     <div class="d-flex justify-content-center">
         <pagination-controls previousLabel="Prev" nextLabel="Next"
@@ -61,4 +69,5 @@
         </pagination-controls>
     </div>
   </div>
+
 </div>

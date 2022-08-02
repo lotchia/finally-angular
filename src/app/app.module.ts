@@ -32,6 +32,7 @@ import { MarketerWalletComponent } from './Components/Marketer/marketer-wallet/m
 import { MarketerHomeComponent } from './Components/Marketer/marketer-home/marketer-home.component';
 import { IntroComponent } from './intro/intro.component';
 import { CodeProductsComponent } from './Components/code-products/code-products.component';
+import { SpinnerComponent } from './shard/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { CodeProductsComponent } from './Components/code-products/code-products.
     MarketerHomeComponent,
     IntroComponent,
     CodeProductsComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
