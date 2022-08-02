@@ -61,8 +61,10 @@ form a{
   padding: 0.5rem !important;
   transition: linear !important;
   width: 150px !important;
-  
- 
+}
+.user{
+  font-size: 25px;
+  margin-top: 25px;
 }
 /* nav form input {
   border: none;

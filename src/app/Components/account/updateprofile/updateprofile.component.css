@@ -1,7 +1,20 @@
 body {
     background: rgb(99, 39, 120)
 }
+.section1{
+    background-color: #868286;
+    width: 800px;
+    margin-left: 20%;
 
+}
+.image
+{
+    margin-top: -90px;
+    margin-left: 15rem;
+}
+form{
+    margin-top: -60px;
+}
 .form-control:focus {
     box-shadow: none;
     border-color: #BA68C8

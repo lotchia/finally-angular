@@ -11,7 +11,7 @@
     background-size: cover;
     position: relative;
     width: 100%;
-    background-image: url("../../../../assets/image/shopping.jpg");
+    background-image: url("../../../../src/assets/image/shopping.jpg");
   } */
   /* Section 1 */
   .section1 {
@@ -266,68 +266,11 @@
   .section3 p{
     width: 600px;
   }
-  /* Secion 4 */
-  .section4{
-  margin-top: 5rem;
-  margin-left: 3rem;
-  width: 100%;
-  margin-bottom: 10rem;
-  }
-  .section4 img{
-  width: 700px;
-
-
-  }
-  /* .section4 .point{
-    width: 1rem;
-    height: 1rem;
-    background-color: #006aff;
-    border-radius: 100%;
-    margin-left: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-  .section4 .asuser{
-    width: 500px;
-    margin-top: 30px;
-  }
-  .section4 .asmarketer{
-    margin-left: 5rem;
-  }
-  .section4 h2{
-    color: #ffffff;
-    margin-top: 5rem;
-    margin-left:0.8rem;
-    width: 100rem;
-    font-size: 2rem;
-    font-style: italic;
-    /* word-spacing: 0.2rem; */
-    /* font-family: monospace;
-  }
-  .section4 p{
-    color: #bbc3ca;
-    margin-top: 8.5rem;
-    width: 80rem;
-    margin-left: -15rem;
-    font-size: 1rem;
-  }
-  .section4 .we-are {
-    max-width: 45rem;
-    margin-left: 30rem;
-    margin-bottom: 5rem;
-    margin-top: rem;
-  }  */
-  .section4 .usersign
-  {
-  margin-left: 15rem;
-  }
-  .section4 .marketersign{
-    margin-left: 35rem;
-  }
   /* Section 5 */
   .section5{
     display: flex;
     margin-left: 3rem;
+    margin-top: 200px;
   }
   .section5 h2 {
     color: #3840f7;

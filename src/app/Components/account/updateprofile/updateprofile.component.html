@@ -1,9 +1,11 @@
 <div class="container rounded bg-white mt-5 mb-5">
-    <div class="row">
+    <div class="row section1">
         <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" 
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5 image">
+                <img class="rounded-circle mt-5 " width="150px" 
                 src="../../../../assets/image/user.png"><span class="font-weight-bold">{{oldData.userName}}</span>
-                <span class="text-black-50">{{oldData.email}}</span><span> </span></div>
+                <span class="text-black-50">{{oldData.email}}</span><span> </span>
+            </div>
         </div>
         <form [formGroup]="updateform">
         <div class="col-md-5 border-right">
