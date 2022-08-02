@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { APIViewModel } from '../Models/APIViewModel';
+import { CollectionCodeViewModel } from '../Models/CollectionCodeViewModel';
 import { CollectionProductViewModel } from '../Models/CollectionProductViewModel';
 import { CollectionEditViewModel, CollectionViewModel } from '../Models/CollectionViewModel';
 
@@ -31,5 +32,11 @@ export class CollectionService {
 
   getProductsBycollectionID(id: number) {
     return this.http.get<APIViewModel>("https://localhost:63000/CollectionDetails/Get?CollectionID=" + id)
+  }
+  GetCollectionByCode(CollectionCode:CollectionCodeViewModel) {
+    return this.http.get<APIViewModel>("https://localhost:63000/CollectionDetails/GetByCode?Code="+ CollectionCode.Code)
+  }
+  Order(CollectionCode:CollectionCodeViewModel) {
+    return this.http.post<APIViewModel>("https://localhost:63000/CollectionDetails/AddFromCollection", CollectionCode)
   }
 }

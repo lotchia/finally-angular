@@ -17,7 +17,7 @@ export class AuthService{
         return this.Logged.next(status);
      }
     IsLoggedIn():boolean{
-        let token =localStorage.getItem('token')
+        let token =localStorage.getItem('id')
         if(token != null){
             return true;
         }
